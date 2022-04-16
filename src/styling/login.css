@@ -5,6 +5,8 @@ body {
     color: white;
 }
 
+/* Styles the textual tags */
+
 #loginPageImg {
     width: 40vw;
     height: 100vh;
@@ -44,9 +46,42 @@ body {
     font-family: "Rosarivo", serif;
 }
 
+/* Styles the input tags */
+#emailInput {
+    position: absolute;
+    left: 55%;
+    top: 30%;
+}
 
+#passwordInput {
+    position: absolute;
+    left: 55%;
+    top: 42%;
+}
 
+/* Styles the button tags */
 
+#forgotPassword, #signUp, #signIn{
+    position: absolute;
+    color: white;
+    background-color: #0F6E97;
 
+    border-radius: 10%;
+}
 
+#signIn {
+    left: 60%;
+    bottom: 50%;
+}
+
+#forgotPassword {
+    left: 43%;
+
+    bottom: 0;
+}
+
+#signUp {
+    left: 90%;
+    bottom: 0;
+}
 
