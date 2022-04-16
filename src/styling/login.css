@@ -25,8 +25,11 @@ body {
     text-align: center;
     left: 15%;
 
-    font-family: "Rosarivo", serif;
-    font-size: 48pt;
+    font-family: 'Rosarivo', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 67px;
 }
 
 #email {
@@ -35,7 +38,12 @@ body {
     left: 5%;
     bottom: -220px;
 
-    font-family: "Rosarivo", serif;
+    font-family: 'Rosarivo', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 21px;
+
 }
 
 #password {
@@ -44,7 +52,11 @@ body {
     left: 5.5%;
     bottom: -340px;
 
-    font-family: "Rosarivo", serif;
+    font-family: 'Rosarivo', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 21px;
 }
 
 /* Styles the input tags */

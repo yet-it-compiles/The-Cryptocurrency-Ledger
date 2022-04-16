@@ -33,3 +33,16 @@ body {
     top: 0;
     right: 0;
 }
+
+/* Styles the textual tags */
+#dashboard {
+    position: relative;
+
+    left: 6.2%;
+
+    font-family: 'Rosarivo', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 51px;
+}
