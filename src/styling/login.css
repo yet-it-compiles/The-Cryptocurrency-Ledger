@@ -5,12 +5,47 @@ body {
     color: white;
 }
 
-#login, #email, #password {
-    position: relative;
-    left: 50%;
+#loginPageImg {
+    width: 40vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
 }
 
-#email
+#login{
+    position: relative;
+    text-align: center;
+    left: 15%;
+
+    font-family: "Rosarivo", serif;
+    font-size: 48pt;
+}
+
+#email {
+    position: relative;
+    text-align: center;
+    left: 5%;
+    bottom: -220px;
+
+    font-family: "Rosarivo", serif;
+}
+
+#password {
+    position: relative;
+    text-align: center;
+    left: 5.5%;
+    bottom: -340px;
+
+    font-family: "Rosarivo", serif;
+}
+
+
+
 
 
 
