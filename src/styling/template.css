@@ -3,3 +3,33 @@
 body {
 
 }
+
+/* Styles the image tag */
+#background {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+
+#sidePanel {
+    position: absolute;
+    width: 117px;
+    height: 90vh;
+
+    bottom: 0;
+    left: 0;
+}
+
+#topPanel {
+    position: absolute;
+
+    top: 0;
+    right: 0;
+}
