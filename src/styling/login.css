@@ -1,0 +1,17 @@
+/* This css module styles the login page */
+
+body {
+    background-color: #343333;
+    color: white;
+}
+
+#login, #email, #password {
+    position: relative;
+    left: 50%;
+}
+
+#email
+
+
+
+
