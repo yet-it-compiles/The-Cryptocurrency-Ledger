@@ -5,8 +5,7 @@ body {
     color: white;
 }
 
-/* Styles the textual tags */
-
+/* Styles the background image tag */
 #loginPageImg {
     width: 40vw;
     height: 100vh;
@@ -19,6 +18,7 @@ body {
     z-index: -1;
 }
 
+/* Styles the textual tags */
 #login{
     position: relative;
     text-align: center;
@@ -74,14 +74,15 @@ body {
     bottom: 50%;
 }
 
-#forgotPassword {
-    left: 43%;
-
-    bottom: 0;
-}
-
 #signUp {
     left: 90%;
     bottom: 0;
 }
+
+#forgotPassword {
+    left: 43%;
+    bottom: 0;
+}
+
+
 
