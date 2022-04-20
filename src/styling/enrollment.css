@@ -1,22 +1,59 @@
 /* This css module styles the enrollment page */
 
 body {
-    background-color: #343333;
+    overflow: hidden;
+
+    background-color: #2E3047;
+    background-position: center;
     color: white;
 }
 
 /* Styles the image tags */
 #enrollmentPageImg {
-    position: fixed;
-    width: 40vw;
-    height: 100vh;
-    object-fit: cover;
 
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
     z-index: -1;
 }
 
 /* Styles the textual tags */
+
+input {
+    background-color: transparent;
+    border: transparent;
+    padding-top: 0px;
+    padding-bottom: 2px;
+
+}
+
+
+
+/* General positioning of form */
+#form{
+    position: absolute;
+    left:37%;
+    top:27%;
+}
+
+#user{
+    position: relative;
+    top:38px;
+}
+
+#pass{
+    position: relative;
+    top: 75px;
+}
+
+#passc{
+    position: relative;
+    top:112px;
+}
+
+h2 {
+    font-size: 16px;
+}
+
+h1{
+    position: absolute;
+    left: 50%;
+    top:20%;
+}
