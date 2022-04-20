@@ -2,7 +2,6 @@
 
 body {
     overflow: hidden;
-
     background-color: #2E3047;
     background-position: center;
     color: white;
@@ -14,7 +13,7 @@ body {
     z-index: -1;
 }
 
-/* Styles the textual tags */
+/* All inputs will be styled as follows */
 
 input {
     background-color: transparent;
@@ -30,30 +29,37 @@ input {
 #form{
     position: absolute;
     left:37%;
-    top:27%;
+    top:23%;
 }
 
-#user{
+/* Positioning of each field */
+
+.email{
     position: relative;
-    top:38px;
 }
 
-#pass{
+.user{
     position: relative;
-    top: 75px;
+    top:19px;
 }
 
-#passc{
+.pass{
     position: relative;
-    top:112px;
+    top: 26px;
 }
 
-h2 {
-    font-size: 16px;
+.passc{
+    position: relative;
+    top:31px;
 }
 
-h1{
+.SignUp{
+
     position: absolute;
     left: 50%;
     top:20%;
+}
+
+h2 {
+    font-size: 16px;;
 }
