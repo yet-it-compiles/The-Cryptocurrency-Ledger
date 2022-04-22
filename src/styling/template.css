@@ -1,7 +1,7 @@
 /* This css module represents the general styling for each page */
 
 body {
-
+    overflow-x: hidden ;
 }
 
 /* Styles the image tag */
@@ -22,9 +22,67 @@ body {
     position: absolute;
     width: 117px;
     height: 90vh;
-
+    color: #2E3047;
     bottom: 0;
     left: 0;
+}
+
+.sideButton{
+    position: relative;
+    height:80px;
+    width:100px;
+}
+
+#button1{
+    position: relative;
+    top:-25px;
+}
+
+#button2{
+    position: absolute;
+    top:160px;
+    left:8px;
+}
+
+#button3{
+    position: absolute;
+    top:245px;
+    left:8px;
+}
+
+#button4{
+    position: absolute;
+    top:330px;
+    left:8px;
+}
+
+#button5{
+    position: absolute;
+    top:415px;
+    left:8px;
+}
+
+#button6{
+    position: absolute;
+    top:500px;
+    left:8px;
+}
+
+#noti{
+    position:absolute;
+    top:-210px;
+    left: 700px;
+    scale: 7%;
+    z-index: 1;
+}
+
+#profilePic{
+    position: absolute;
+    top:-135px;
+    left: 75%;
+    scale: 20%;
+    border-radius: 80%;
+    z-index: 0;
 }
 
 #topPanel {
@@ -37,8 +95,8 @@ body {
 /* Styles the textual tags */
 #dashboard {
     position: relative;
-
-    left: 6.2%;
+    top: -12px;
+    left:50%;
 
     font-family: 'Rosarivo', serif;
     font-style: normal;

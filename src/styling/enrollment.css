@@ -3,63 +3,57 @@
 body {
     overflow: hidden;
     background-color: #2E3047;
-    background-position: center;
-    color: white;
+    color: #3BBA9C;
 }
 
 /* Styles the image tags */
 #enrollmentPageImg {
 
+    /* Set rules to fill background */
+    min-height: 100%;
+    min-width: 1024px;
+
+    /* Set up proportionate scaling */
+    width: 100%;
+    height: auto;
+
+    /* Set up positioning */
+    position: fixed;
+    top: 0;
+    left: 0;
     z-index: -1;
 }
 
 /* All inputs will be styled as follows */
 
 input {
-    background-color: transparent;
+    background-color: white;
     border: transparent;
     padding-top: 0px;
-    padding-bottom: 2px;
+    margin-bottom: 50px;
 
 }
 
-
+#container{
+    width: device-width;
+}
 
 /* General positioning of form */
 #form{
     position: absolute;
-    left:37%;
-    top:23%;
+    left:36%;
+    margin-top: 13.6%;
+
 }
 
-/* Positioning of each field */
+#signUp{
 
-.email{
-    position: relative;
-}
-
-.user{
-    position: relative;
-    top:19px;
-}
-
-.pass{
-    position: relative;
-    top: 26px;
-}
-
-.passc{
-    position: relative;
-    top:31px;
-}
-
-.SignUp{
-
+    font-family: "Lexend", Serif;
     position: absolute;
     left: 50%;
     top:20%;
 }
 
 h2 {
-    font-size: 16px;;
+    font-size: 16px;
 }
