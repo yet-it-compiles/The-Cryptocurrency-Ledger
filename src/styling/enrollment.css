@@ -50,6 +50,54 @@ body {
     margin-top: 13.6%;
 }
 
+#createAccountBtn {
+    position: absolute;
+    width: 194px;
+    height: 35px;
+
+    background: linear-gradient(94.57deg, #3BBA9C -32.58%, #FFFFFF 221.52%);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+
+    font-family: 'Lexend', serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+}
+
+#accountExistsBtn {
+    position: absolute;
+    width: 201px;
+    height: 16px;
+
+    font-family: 'Lexend', serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 14px;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    bottom: -15%;
+
+    color: #3BBA9C;
+
+    border:none;
+    background:none;
+    outline:none;
+}
+
 input {
     background-color: white;
     border: transparent;
