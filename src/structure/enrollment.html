@@ -1,50 +1,53 @@
-<!-- This html module is the structure for the enrollment page -->
+<!-- This html module defines the structure for the enrollment page -->
 <!DOCTYPE html>
 
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="/src/styling/enrollment.css">
-  <link rel="shortcut icon" href="#">
-  <title>Enrollment Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/src/styling/enrollment.css">
+    <link rel="shortcut icon" href="#">
+    <title>Enrollment Page</title>
 </head>
 
 <body>
 
-<h1 id = "signUp">Sign Up</h1>
+<h1 class="signUp">Sign Up</h1>
 
-<!-- Defines the form for the page -->
-<div id = "container">
-  <div id = "form">
+<!-- Defines the form structure -->
+<div id="enrollmentForm">
+
+    <h2>Username</h2>
+
+    <label>
+        <input type="text" class="email">
+    </label>
 
     <h2>Email</h2>
 
-    <input type="text" id = "email">
+    <label>
+        <input type="text" class="user">
+    </label>
 
-    <h2 class="user">Username</h2>
+    <h2>Password</h2>
 
-    <input class = "user" type="text">
+    <label>
+        <input type="text" class="pass">
+    </label>
 
-    <h2 class="pass">Create Password</h2>
+    <h2>Confirm Password</h2>
 
-    <input class = "pass" type="text">
+    <label>
+        <input type="text" name="" class="passc">
+    </label>
 
-    <h2 class="passc">Confirm Password</h2>
-
-    <input type="text" class="passc">
-
-    <button id = "submit">Create Account</button>
-
-  </div>
+    <button is="createAccount">Create Account</button>
+    <button id="accountExists">Already have an account?</button>
 </div>
 
-
-<img id="enrollmentPageImg" src="/images/background_img.png" alt="Enrollment Page Image" width = "1400" height="700">
-
+<img id="loginPageImg" src="/images/Enrollment/enrollmentBackground.png" alt="Login Page Image">
 
 </body>
-
 
 </html>

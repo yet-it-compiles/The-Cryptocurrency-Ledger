@@ -2,25 +2,24 @@
 
 body {
     overflow: hidden;
-    background-color: #2E3047;
+
     color: #3BBA9C;
+    background-color: #2E3047;
+
+    font-size: 16px;
 }
 
 /* Styles the image tags */
 #enrollmentPageImg {
-
-    /* Set rules to fill background */
-    min-height: 100%;
-    min-width: 1024px;
-
-    /* Set up proportionate scaling */
-    width: 100%;
-    height: auto;
-
-    /* Set up positioning */
     position: fixed;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+
     top: 0;
+    bottom: 0;
     left: 0;
+    right: 0;
     z-index: -1;
 }
 
@@ -34,26 +33,21 @@ input {
 
 }
 
-#container{
+#container {
     width: device-width;
 }
 
 /* General positioning of form */
-#form{
+#enrollmentForm {
     position: absolute;
-    left:36%;
+    left: 36%;
     margin-top: 13.6%;
 
 }
 
-#signUp{
-
-    font-family: "Lexend", Serif;
+#signUp {
+    font-family: "Lexend", serif;
     position: absolute;
     left: 50%;
-    top:20%;
-}
-
-h2 {
-    font-size: 16px;
+    top: 20%;
 }
