@@ -1,17 +1,18 @@
 /* This css module styles the enrollment page */
 
 body {
-    overflow: hidden;
+    font-family: "Lexend", serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 18px;
 
-    color: #3BBA9C;
-    background-color: #2E3047;
-
-    font-size: 16px;
+    color: #FFFFFF;
 }
 
-/* Styles the image tags */
+
 #enrollmentPageImg {
-    position: fixed;
+    position: absolute;
     width: 100vw;
     height: 100vh;
     object-fit: cover;
@@ -23,31 +24,35 @@ body {
     z-index: -1;
 }
 
-/* All inputs will be styled as follows */
+#enrollmentFormImg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#signUp {
+    position: absolute;
+    width: 166px;
+
+    top: 10%;
+    left: 50%;
+
+    font-family: 'Lexend', serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 40px;
+    letter-spacing: 0.05em;
+}
+
+#enrollmentForm {
+    position: absolute;
+    left: 40%;
+    margin-top: 13.6%;
+}
 
 input {
     background-color: white;
     border: transparent;
-    padding-top: 0px;
+    padding-top: 0;
     margin-bottom: 50px;
-
-}
-
-#container {
-    width: device-width;
-}
-
-/* General positioning of form */
-#enrollmentForm {
-    position: absolute;
-    left: 36%;
-    margin-top: 13.6%;
-
-}
-
-#signUp {
-    font-family: "Lexend", serif;
-    position: absolute;
-    left: 50%;
-    top: 20%;
 }
