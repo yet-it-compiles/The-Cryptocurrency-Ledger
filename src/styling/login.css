@@ -6,9 +6,9 @@ body {
 }
 
 /* Styles the image tag */
-#loginPageImg {
+#background {
     position: fixed;
-    width: 40vw;
+    width: 100vw;
     height: 100vh;
     object-fit: cover;
 
@@ -19,82 +19,22 @@ body {
     z-index: -1;
 }
 
-/* Styles the textual tags */
-#login{
-    position: relative;
-    text-align: center;
-    left: 25%;
+#backgroundSymbol {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 
-    font-family: 'Rosarivo', serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 48px;
-    line-height: 67px;
+    z-index: 0;
 }
 
-#email {
-    position: relative;
-    text-align: center;
-    left: 10%;
-    top: 80px;
-
-    font-family: 'Rosarivo', serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 21px;
-}
-
-#password {
-    position: relative;
-    text-align: center;
-    left: 10.5%;
-    top: 180px;
-
-    font-family: 'Rosarivo', serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 21px;
-}
-
-/* Styles the input tags */
-#emailInput {
-    position: relative;
-
-    top: 38px;
-    left: 59%;
-}
-
-#passwordInput {
-    position: relative;
-
-    top: 170px;
-    left: 51.8%;
-
-
-}
-
-/* Styles the button tags */
-#forgotPassword, #signUp, #signIn{
+#backgroundForm {
     position: absolute;
-    background-color: #0F6E97;
-    color: white;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 
-    border-radius: 10%;
+    z-index: 1;
 }
 
-#signIn {
-    left: 70%;
-    bottom: 50%;
-}
-
-#signUp {
-    left: 90%;
-    bottom: 10px;
-}
-
-#forgotPassword {
-    left: 43%;
-    bottom: 10px;
-}
