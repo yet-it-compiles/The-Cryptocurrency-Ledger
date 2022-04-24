@@ -31,12 +31,7 @@ body {
 
 #backgroundForm {
     position: absolute;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-
-    z-index: 1;
+    left: 25%;
 }
 
 /* Defines the styles for the button on the page */
