@@ -26,16 +26,26 @@ body {
 }
 
 #enrollmentFormImg {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+
+    position: absolute;
+
+    width: 40vw;
+    height: 55vh;
+
+    top: 25%;
+    left: 30%;
+
+    z-index: -1;
 }
 
 hr{
+    position: relative;
     color: white;
+    width : 40vh;
+    left: -40%;
 }
 
-#signUp {
+signUp {
     position: absolute;
 
     top: 10%;
@@ -48,10 +58,24 @@ hr{
     letter-spacing: 0.05em;
 }
 
+#signUp{
+    position: relative;
+
+    left: 45vw;
+    top: 8vh;
+
+    font-family: 'Lexend', serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 40px;
+    letter-spacing: 0.05em;
+}
+
+
 #enrollmentForm {
-    position: absolute;
+    position: relative;
     left: 40%;
-    margin-top: 8.6%;
+    margin-top: 13%;
 }
 
 #createAccountBtn {
