@@ -104,6 +104,10 @@ hr{
     outline:none;
 }
 
+#accountExistsBtn:hover {
+    color: #3B9A9C;
+}
+
 input {
     position: relative;
     top: 8px;
