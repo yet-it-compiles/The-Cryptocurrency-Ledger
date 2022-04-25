@@ -29,11 +29,12 @@ body {
 
     position: absolute;
 
-    width: 40vw;
-    height: 55vh;
+    width: 700px;
+    height: 500px;
 
-    top: 25%;
-    left: 30%;
+    top: 16%;
+    left: 25%;
+
 
     z-index: -1;
 }
@@ -75,7 +76,7 @@ signUp {
 #enrollmentForm {
     position: relative;
     left: 40%;
-    margin-top: 13%;
+    margin-top: 6%;
 }
 
 #createAccountBtn {
@@ -93,6 +94,7 @@ signUp {
     font-size: 14px;
     line-height: 18px;
     margin-top: 20px;
+    margin-left: 2.5%;
     /* identical to box height */
 
     display: flex;
@@ -114,6 +116,7 @@ signUp {
     font-weight: 700;
     font-size: 14px;
     line-height: 14px;
+    margin-left: 2.5%;
 
 
     display: flex;
