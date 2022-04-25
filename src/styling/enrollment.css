@@ -6,6 +6,7 @@ body {
     font-weight: 400;
     font-size: 18px;
     line-height: 18px;
+    overflow: hidden;
 
     color: #FFFFFF;
 }
@@ -30,12 +31,15 @@ body {
     margin-right: auto;
 }
 
+hr{
+    color: white;
+}
+
 #signUp {
     position: absolute;
-    width: 166px;
 
     top: 10%;
-    left: 50%;
+    left: 43.5%;
 
     font-family: 'Lexend', serif;
     font-style: normal;
@@ -47,7 +51,7 @@ body {
 #enrollmentForm {
     position: absolute;
     left: 40%;
-    margin-top: 13.6%;
+    margin-top: 8.6%;
 }
 
 #createAccountBtn {
@@ -64,6 +68,7 @@ body {
     font-weight: 700;
     font-size: 14px;
     line-height: 18px;
+    margin-top: 20px;
     /* identical to box height */
 
     display: flex;
@@ -86,14 +91,30 @@ body {
     font-size: 14px;
     line-height: 14px;
 
+
     display: flex;
     align-items: center;
     text-align: center;
-    bottom: -15%;
+    bottom: -27%;
 
     color: #3BBA9C;
 
     border:none;
     background:none;
     outline:none;
+}
+
+input {
+    position: relative;
+    top: 8px;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+html {
+    background: url("/images/Enrollment/background.png" ) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
