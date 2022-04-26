@@ -42,8 +42,8 @@ body {
 hr{
     position: relative;
     color: white;
-    width : 40vh;
-    left: -40%;
+    width : 300px;
+    left: -42%;
 }
 
 signUp {
@@ -76,7 +76,10 @@ signUp {
 #enrollmentForm {
     position: relative;
     left: 40%;
-    margin-top: 6%;
+    top:12vh;
+
+    margin:auto;
+
 }
 
 #createAccountBtn {
