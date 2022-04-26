@@ -138,8 +138,13 @@ signUp {
 input {
     position: relative;
     top: 8px;
+    color: white;
     background-color: transparent;
     border-color: transparent;
+
+    border:none;
+    background:none;
+    outline:none;
 }
 
 html {
