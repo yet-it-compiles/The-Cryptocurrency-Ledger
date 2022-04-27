@@ -1,0 +1,54 @@
+/* This css module styles the login page */
+
+body {
+    background-color: #343333;
+    color: white;
+}
+
+/* Defines the style for the three images on the page */
+#background {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+
+#backgroundSymbol {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+
+    z-index: 0;
+}
+
+#backgroundForm {
+    position: absolute;
+    left: 25%;
+}
+
+/* Defines the styles for the button on the page */
+#signIn {
+    position: absolute;
+
+    background: linear-gradient(94.57deg, #3BBA9C -32.58%, #FFFFFF 221.52%);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+
+    font-family: "Lexend", serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 2px;
+}
