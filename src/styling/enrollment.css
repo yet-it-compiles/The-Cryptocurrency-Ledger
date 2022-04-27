@@ -39,8 +39,13 @@ body {
     z-index: -1;
 }
 
-hr{
+#login{
     position: relative;
+    left: 50%;
+}
+
+hr{
+
     color: white;
     width : 300px;
     left: -42%;
