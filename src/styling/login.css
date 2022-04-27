@@ -1,8 +1,18 @@
 /* This css module styles the login page */
-#login{
-    position: absolute;
-    left: 44%;
-    top: 18%;
+#login {
+    position: relative;
+    text-align: center;
+    font-family: 'Lexend', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 48px;
+    line-height: 60px;
+    letter-spacing: 0.15em;
+    padding-top: 100px;
+
+    color: #FFFFFF;
+
+
 }
 
 body {
@@ -11,10 +21,37 @@ body {
     overflow: hidden;
 }
 
-#form{
+/* define style for the overlay */
+#form {
+    position: fixed;
+    background-image: url("/images/Login/backgroundForm.png");
+    width: 1097px;
+    height: 642px;
+    margin: auto;
+    align-content: center;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    border-radius: 40px;
+    font-family: "Lexend", sans-serif;
+    font-style: normal;
+    font-size: 14px;
+}
+
+/* define the style within the overlay */
+#info {
     position: relative;
-    top:30vh;
-    left:40vw;
+    margin: auto;
+    width: 50%;
+}
+
+#email {
+    position: relative;
+    font-weight: normal;
+}
+
+#password {
+    font-weight: normal;
 }
 
 
@@ -60,35 +97,53 @@ body {
 
 /* Defines the styles for the button on the page */
 #signIn {
-    position: absolute;
-
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 100px;
+    height: 35px;
     background: linear-gradient(94.57deg, #3BBA9C -32.58%, #FFFFFF 221.52%);
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 5px;
+    border-radius: 10%;
+    border: none;
 
-    font-family: "Lexend", serif;
+    font-family: "Lexend", sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 14px;
     line-height: 18px;
-    display: flex;
-    align-items: center;
-    text-align: center;
+    color: white;
     letter-spacing: 2px;
+    margin: 40px auto 40px;
+
+}
+
+#signIn:hover {
+    background: linear-gradient(94.57deg, #9EECD9 -32.58%, #3BBA9C 221.52%);
+}
+
+#signIn:active {
+    background: linear-gradient(94.57deg, #8DDBC8 -32.58%, #2AA98B 221.52%);
 }
 
 input{
-    background-color: transparent;
-    border-color: transparent;
+    color: white;
+    font-size: 16px;
 
-    border:none;
-    background:none;
+    border: none transparent;
+    background: transparent none;
     outline:none;
 }
 
+p {
+    letter-spacing: 0.075em;
+}
+
+#registerNow {
+    color: #3BBA9C;
+}
+
+
 hr{
     position: relative;
-    width: 300px;
-    left: -40%;
-
 }
