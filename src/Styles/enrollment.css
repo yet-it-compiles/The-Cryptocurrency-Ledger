@@ -39,16 +39,11 @@ body {
     z-index: -1;
 }
 
-#login{
-    position: relative;
-    left: 50%;
-}
-
 hr{
-
+    position: relative;
     color: white;
-    width : 300px;
-    left: -42%;
+    width : 40vh;
+    left: -40%;
 }
 
 signUp {
@@ -81,10 +76,7 @@ signUp {
 #enrollmentForm {
     position: relative;
     left: 40%;
-    top:12vh;
-
-    margin:auto;
-
+    margin-top: 6%;
 }
 
 #createAccountBtn {
