@@ -1,6 +1,6 @@
 import styled from "styled-components";
 // import {Link} from "react-router-dom";
-import ethImg from "../../../Assets/Images/Vector.png";
+import ethImg from "../../Assets/Images/Vector.png";
 
 export const Container = styled.div`
     position: absolute;
