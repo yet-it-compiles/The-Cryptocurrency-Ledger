@@ -1,42 +1,39 @@
-import React from 'react';
 import {
-    Container,
-    BackgroundImg,
-    FormWrap,
-    Logo,
-    FormContent,
+    FormContainer,
     Form,
     FormH1,
     FormLabel,
     FormInput,
     Text,
-    FormButton,
-} from "./LoginElements";
-
+} from "../Form";
+import {Button} from "../Button.js"
+import {MainBackground, BackgroundImg, Logo} from "../PageBackground"
 
 function Login() {
     
     return (
         <>
-            <Container>
+            <MainBackground>
                 <BackgroundImg>
-                <FormWrap>
-                    <Logo to="/">LOGO</Logo> 
-                    <FormContent>
-                        <Form action="#">
-                            <FormH1 to="/">Login</FormH1>
+                <Logo to="/">LOGO</Logo> 
+
+                    <FormContainer>
+                        <Form className="login-page" action="#">
+                            <FormH1 className='login-h1' to="/">Login</FormH1>
                             <FormLabel htmlFor="for">Email</FormLabel>
-                            <FormInput type="email" required></FormInput>
+                            <FormInput type="email" required/>
                             <FormLabel htmlFor="for">Password</FormLabel>
-                            <FormInput className='pass' type="password" required></FormInput>
-                            <Text className="forgot-pass" to="/">Forgot Password?</Text>
-                            <FormButton className='mint-gradient' type="submit">Sign In</FormButton>
-                            <Text className='signup-prompt'>Don't have an account? <Text className='signup-link'>Sign Up</Text></Text>
+                            <FormInput className='pass' type="password" required/>
+                            <Text className="forgot-pass" to="/forgotpass">Forgot Password?</Text>
+
+                            <Button className="mint-gradient med-btn" type="submit">Sign In</Button>
+
+                            <Text to="/signup" className='signup-prompt'>Don't have an account? <Text to="/signup" className='signup-link'>Sign Up</Text></Text>
                         </Form>
-                    </FormContent>
-                </FormWrap>
+                    </FormContainer>
+
                 </BackgroundImg>
-            </Container>
+            </MainBackground>
         </>
   )
 }
