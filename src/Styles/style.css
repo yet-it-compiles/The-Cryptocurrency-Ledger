@@ -310,7 +310,10 @@ body.dark .home .text{
 .smaller-icon {
     position: relative;
     right: -18px;
-    color: white;
     width: 25px;
     height: 25px;
+}
+
+.dark-mode-icon {
+    background-color: #F6F5FF;
 }
