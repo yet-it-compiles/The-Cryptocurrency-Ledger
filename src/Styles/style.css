@@ -15,6 +15,12 @@
     --toggle-color: #DDD;
     --text-color: #707070;
 
+    /* ====== Icon Value ===== */
+    --icon-color-change: 0deg;
+    --brightness: 100%;
+    --hue-value: 0;
+
+
     /* ====== Transition ====== */
     --tran-03: all 0.2s ease;
     --tran-03: all 0.3s ease;
@@ -40,6 +46,14 @@ body.dark{
     --primary-color-light: #3a3b3c;
     --toggle-color: #fff;
     --text-color: #ccc;
+
+    --icon-color-change: 1;
+    --brightness: 0%;
+    --hue-value:320deg;
+}
+
+.color-property {
+    filter: brightness(var(--brightness)) invert(var(--icon-color-change)) hue-rotate(var(--hue-value));
 }
 
 /* ===== Sidebar ===== */
@@ -315,8 +329,7 @@ body.dark .home .text{
 }
 
 .dark-mode-icon {
-    filter: sepia(1) hue-rotate(150deg);
-    background-color: #ABB0C8;
+    filter: invert(1) hue-rotate(180deg);
 }
 
 .spaced-out {
