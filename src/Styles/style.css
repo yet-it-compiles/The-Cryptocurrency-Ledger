@@ -135,6 +135,16 @@ body.dark{
     border-radius: 50%;
     border: 2px solid mediumaquamarine;
 }
+
+.sidebar header .profile-name {
+    position: absolute;
+    color: #695CFE;
+    margin-left: 70px;
+    margin-top: -37px;
+    font-family: "Lucida Grande", Verdana;
+    font-weight:bold;
+    font-size: 20px;
+}
 header .image-text .name {
     margin-top: 2px;
     margin-left: 46%;
@@ -326,6 +336,7 @@ body.dark .switch::before{
     height: 100vh;
     width: calc(100% - 78px);
 }
+
 body.dark .home .text{
     color: var(--text-color);
 }

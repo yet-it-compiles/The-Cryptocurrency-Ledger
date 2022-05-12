@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Position relative to sidebar */
+.icon-property {
+    position: relative;
+    right: -18px;
+    width: 25px;
+    height: 25px;
+}
+
+/* margin space between icons */
+.icon-space {
+    margin: 15px 0;
+}
+
+/*  ==== Specific Icon Properties */
+
+.dashboard-icon-property {
+    font-size: 15px;
+    margin-top: -2px;
+    margin-left: 20%;
+    display: block;
+}
+
+.sim-trading-property {
+    font-size: 15px;
+    margin-top: -2px;
+    margin-left: 19.5%;
+    display: block;
+}
+
+.charts-property {
+    font-size: 15px;
+    margin-top: -2px;
+    margin-left: 20%;
+    display: block;
+}
+
+.portfolio-property {
+    font-size: 15px;
+    margin-top: -2px;
+    margin-left: 20%;
+    display: block;
+}
+
+.alarm-property {
+    font-size: 15px;
+    margin-top: -2px;
+    margin-left: 20%;
+    display: block;
+}
+.news-property {
+    font-size: 15px;
+    margin-top: -2px;
+    margin-left: 20%;
+    display: block;
+}
+
+.notes-property {
+    font-size: 15px;
+    margin-top: -2px;
+    margin-left: 20%;
+    display: block;
+}
+
+.settings-property {
+    font-size: 15px;
+    margin-top: -2px;
+    margin-left: 20%;
+    display: block;
+}
+
+.sign-out-property {
+    font-size: 16px;
+    margin-top: -2px;
+    margin-left: 20%;
+    display: block;
+}
+
+
+
+
