@@ -1,3 +1,4 @@
+<!-- This html module defines the side navigation bar for the dashboard -->
 <!DOCTYPE html>
 
 <html lang="en">
@@ -8,9 +9,9 @@
     <link rel="stylesheet" href="/src/Styles/style.css">
     <link rel="iconsheet" href="/src/Styles/icons.css">
 
-    <!-- Icon Pack Reference -->
+    <!-- Defines the icon pack reference -->
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
-    <title>Responsive Sidebar</title>
+    <title>Dashboard</title>
 </head>
 
 <body>
@@ -26,121 +27,134 @@
         -->
         <div>
             <img class="profile-picture" src="/src/Assets/Images/Dashboard/logo.png" alt="pic">
-            <span class="text profile-name">First Last</span> <!-- User enter name Here -->
+            <!-- Stores the users name -->
+            <span class="text profile-name">First Last</span>
         </div>
 
 
         <i class='bx bx-chevron-right toggle'></i>
-        </header>
+    </header>
 
-        <div class="menu-bar">
-            <div class="menu spaced-out">
+    <!-- Defines the dashboard buttons-->
+    <div class="menu-bar">
+        <div class="menu spaced-out">
 
-                <li class="search-box">
-                    <i class='bx bx-search icon'></i>
-                    <label>
-                        <input type="text" placeholder="Search...">
-                    </label>
-                </li>
+            <li class="search-box">
+                <i class='bx bx-search icon'></i>
+                <label>
+                    <input type="text" placeholder="Search Crypto">
+                </label>
+            </li>
 
-                <ul class="menu-links">
-                    <li class="nav-link spaced-out">
-                        <a href="#">
-                            <img class = "smaller-icon color-property" src="../Assets/Images/Dashboard/dashboard.png" alt="DASH">
-                            <!--<i class='bx bx-home-alt icon' ></i> -->
-                            <span class="text nav-text" style="font-size: 15px; margin-top: -2px; margin-left: 20%; display: block;">Dashboard</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-link spaced-out">
-                        <a href="#">
-                            <img class = "smaller-icon color-property" src="../Assets/Images/Dashboard/simulated-trading.png" alt="SIMULATED TRADING">
-                            <!--<i class='bx bx-bar-chart-alt-2 icon' ></i> -->
-                            <span class="text nav-text" style="font-size: 15px; margin-top: -2px; margin-left: 19.5%; display: block;">Simulated Trading</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-link spaced-out">
-                        <a href="#">
-                            <img class = "smaller-icon color-property" src="../Assets/Images/Dashboard/graph.png" alt="CHARTS">
-                            <!-- <i class='bx bx-bell icon'></i> -->
-                            <span class="text nav-text" style="font-size: 15px; margin-top: -2px; margin-left: 20%; display: block;">Charts</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-link spaced-out">
-                        <a href="#">
-                            <img class = "smaller-icon color-property" src="../Assets/Images/Dashboard/portfolio.png" alt="PORTFOLIO">
-                            <!-- <i class='bx bx-pie-chart-alt icon' ></i> -->
-                            <span class="text nav-text" style="font-size: 15px; margin-top: -2px; margin-left: 20%; display: block;">Portfolio</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-link spaced-out">
-                        <a href="#">
-                            <img class = "smaller-icon color-property" src="../Assets/Images/Dashboard/alarm.png" alt="ALARMS">
-                            <!-- <i class='bx bx-heart icon' ></i> -->
-                            <span class="text nav-text" style="font-size: 15px; margin-top: -2px; margin-left: 20%; display: block;">Alarms</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-link spaced-out">
-                        <a href="#">
-                            <img class = "smaller-icon color-property" src="../Assets/Images/Dashboard/news.png" alt="NEWS">
-                            <!-- <i class='bx bx-wallet icon' ></i> -->
-                            <span class="text nav-text" style="font-size: 15px; margin-top: -2px; margin-left: 20%; display: block;">News</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-link spaced-out">
-                        <a href="#">
-                            <img class = "smaller-icon color-property" src="../Assets/Images/Dashboard/notes.png" alt="SETTINGS">
-                            <!-- <i class='bx bx-wallet icon' ></i> -->
-                            <span class="text nav-text" style="font-size: 15px; margin-top: -2px; margin-left: 20%; display: block;">Notes</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-link spaced-out">
-                        <a href="#">
-                            <img class = "smaller-icon color-property" src="../Assets/Images/Dashboard/settings.png" alt="SETTINGS">
-                            <!-- <i class='bx bx-wallet icon' ></i> -->
-                            <span class="text nav-text" style="font-size: 15px; margin-top: -2px; margin-left: 20%; display: block;">Settings</span>
-                        </a>
-                    </li>
-
-                </ul>
-            </div>
-
-            <div class="bottom-content">
-                <li class="">
+            <ul class="menu-links">
+                <li class="nav-link spaced-out">
                     <a href="#">
-                        <img class = "smaller-icon color-property" src="../Assets/Images/Dashboard/sign-out.png" alt="Sign-out">
-                        <!-- <i class='bx bx-log-out icon' ></i> -->
-                        <span class="text nav-text" style="font-size: 16px; margin-top: -2px; margin-left: 20%; display: block;">Logout</span>
+                        <img class = "smaller-icon color-property" src="../Assets/Images/Dashboard/dashboard.png"
+                             alt="DASH">
+                        <!--<i class='bx bx-home-alt icon' ></i> -->
+                        <span class="text nav-text" style="font-size: 15px; margin-top: -2px; margin-left: 20%;
+                             display: block;">Dashboard</span>
                     </a>
                 </li>
 
-                <li class="mode">
-                    <div class="sun-moon">
-                        <i class='bx bx-moon icon moon'></i>
-                        <i class='bx bx-sun icon sun'></i>
-                    </div>
-                    <span class="mode-text text">Dark mode</span>
-
-                    <div class="toggle-switch">
-                        <span class="switch"></span>
-                    </div>
+                <li class="nav-link spaced-out">
+                    <a href="#">
+                        <img class = "smaller-icon color-property"
+                             src="../Assets/Images/Dashboard/simulated-trading.png" alt="SIMULATED TRADING">
+                        <!--<i class='bx bx-bar-chart-alt-2 icon' ></i> -->
+                        <span class="text nav-text" style="font-size: 15px; margin-top: -2px; margin-left: 19.5%; display: block;">Simulated Trading</span>
+                    </a>
                 </li>
-                
-            </div>
+
+                <li class="nav-link spaced-out">
+                    <a href="#">
+                        <img class = "smaller-icon color-property"
+                             src="../Assets/Images/Dashboard/graph.png" alt="CHARTS">
+                        <!-- <i class='bx bx-bell icon'></i> -->
+                        <span class="text nav-text" style="font-size: 15px; margin-top: -2px; margin-left: 20%; display: block;">Charts</span>
+                    </a>
+                </li>
+
+                <li class="nav-link spaced-out">
+                    <a href="#">
+                        <img class = "smaller-icon color-property" src="../Assets/Images/Dashboard/portfolio.png"
+                             alt="PORTFOLIO">
+                        <!-- <i class='bx bx-pie-chart-alt icon' ></i> -->
+                        <span class="text nav-text" style="font-size: 15px; margin-top: -2px; margin-left: 20%; display: block;">Portfolio</span>
+                    </a>
+                </li>
+
+                <li class="nav-link spaced-out">
+                    <a href="#">
+                        <img class = "smaller-icon color-property" src="../Assets/Images/Dashboard/alarm.png"
+                             alt="ALARMS">
+                        <!-- <i class='bx bx-heart icon' ></i> -->
+                        <span class="text nav-text" style="font-size: 15px; margin-top: -2px; margin-left: 20%; display: block;">Alarms</span>
+                    </a>
+                </li>
+
+                <li class="nav-link spaced-out">
+                    <a href="#">
+                        <img class = "smaller-icon color-property" src="../Assets/Images/Dashboard/news.png"
+                             alt="NEWS">
+                        <!-- <i class='bx bx-wallet icon' ></i> -->
+                        <span class="text nav-text" style="font-size: 15px; margin-top: -2px; margin-left: 20%; display: block;">News</span>
+                    </a>
+                </li>
+
+                <li class="nav-link spaced-out">
+                    <a href="#">
+                        <img class = "smaller-icon color-property" src="../Assets/Images/Dashboard/notes.png"
+                             alt="SETTINGS">
+                        <!-- <i class='bx bx-wallet icon' ></i> -->
+                        <span class="text nav-text" style="font-size: 15px; margin-top: -2px; margin-left: 20%; display: block;">Notes</span>
+                    </a>
+                </li>
+
+                <li class="nav-link spaced-out">
+                    <a href="#">
+                        <img class = "smaller-icon color-property" src="../Assets/Images/Dashboard/settings.png"
+                             alt="SETTINGS">
+                        <!-- <i class='bx bx-wallet icon' ></i> -->
+                        <span class="text nav-text" style="font-size: 15px; margin-top: -2px; margin-left: 20%; display: block;">Settings</span>
+                    </a>
+                </li>
+
+            </ul>
         </div>
 
-    </nav>
+        <div class="bottom-content">
+            <li class="">
+                <a href="#">
+                    <img class = "smaller-icon color-property" src="../Assets/Images/Dashboard/sign-out.png"
+                         alt="Sign-out">
+                    <!-- <i class='bx bx-log-out icon' ></i> -->
+                    <span class="text nav-text" style="font-size: 16px; margin-top: -2px; margin-left: 20%; display: block;">Logout</span>
+                </a>
+            </li>
 
-    <section class="home">
-        <div class="text">Dashboard Sidebar</div>
-    </section>
+            <!-- Defines the button toggle on the dashboard to switch between light and dark mode -->
+            <li class="mode">
+                <div class="sun-moon">
+                    <i class='bx bx-moon icon moon'></i>
+                    <i class='bx bx-sun icon sun'></i>
+                </div>
+                <span class="mode-text text">Dark mode</span>
 
-    <script src="/src/scripts/script.js"></script>
+                <div class="toggle-switch">
+                    <span class="switch"></span>
+                </div>
+            </li>
+
+        </div>
+    </div>
+
+</nav>
+
+<section class="home">
+    <div class="text">Dashboard Sidebar</div>
+</section>
+
+<script src="/src/scripts/script.js"></script>
 </body>
 </html>
