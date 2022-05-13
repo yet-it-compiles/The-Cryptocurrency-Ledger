@@ -18,45 +18,49 @@ let ENROLL = {
         passwordConfirm: ''
     },
     onChangeName: function (e) {
-        this.state.name = e.target.value;
+        ENROLL.state.name = e.target.value;
+        console.log(ENROLL.state.name);
     },
     onChangeEmail: function (e) {
-        this.state.email = e.target.value;
+        ENROLL.state.email = e.target.value;
+
     },
     onChangePassword: function (e) {
-        this.state.password = e.target.value;
+        ENROLL.state.password = e.target.value;
     },
     onChangePasswordConfirm: function (e) {
-        this.state.passwordConfirm = e.target.value;
+        ENROLL.state.passwordConfirm = e.target.value;
     },
     onSubmit(e) {
         e.preventDefault();
 
-        if(this.state.password===this.state.passwordConfirm){
+        if(ENROLL.state.password===ENROLL.state.passwordConfirm){
             const obj ={
-                name: this.state.name,
-                email: this.state.email,
-                password: this.state.password,
-                passwordConfirm: this.state.passwordConfirm,
+                name: ENROLL.state.name,
+                email: ENROLL.state.email,
+                password: ENROLL.state.password,
+                passwordConfirm: ENROLL.state.passwordConfirm,
             };
 
+            // put data into php file
             axios.post('http://localhost/reactProject/insert.php',obj)
                 .then(res=> console.log(res.data))
                 .catch(error => {
                     console.log(error.response)
                 });
 
-            //To clear text box values
-            this.setState({
-                name: '',
-                email:'',
-                phone:'',
-                password:'',
-                passwordConfirm:'',
+            // clear variables
+            ENROLL.state.name = '';
+            ENROLL.state.email = '';
+            ENROLL.state.password = '';
+            ENROLL.state.passwordConfirm = '';
 
-            })
+            // clear document form
+            document.getElementById('username').value = '';
+            document.getElementById('email').value = '';
+            document.getElementById('password').value = '';
+            document.getElementById('password_confirm').value = '';
         }
-
         else{
             alert("Password mismatch")
         }
@@ -75,16 +79,16 @@ function Registration() {
                              <FormH1 className="signup-h1" to="/">Create your ledger account</FormH1>
 
                              <FormLabel htmlFor="for">Username</FormLabel>
-                             <FormInput className="input-mb" type="username" value={ENROLL.state.name} onChange={ENROLL.onChangeName} required/>
+                             <FormInput className="input-mb" id="username" type="text" onChange={ENROLL.onChangeName} required/>
 
                              <FormLabel htmlFor="for">Email</FormLabel>
-                             <FormInput className="input-mb" type="email" value={ENROLL.state.email} onChange={ENROLL.onChangeEmail} required/>
+                             <FormInput className="input-mb" id="email" type="text" onChange={ENROLL.onChangeEmail} required/>
 
                              <FormLabel htmlFor="for">Password</FormLabel>
-                             <FormInput className="input-mb" type="password" value={ENROLL.state.password} onChange={ENROLL.onChangePassword}  required/>
+                             <FormInput className="input-mb" id="password" type="password" onChange={ENROLL.onChangePassword}  required/>
 
                              <FormLabel htmlFor="for">Confirm Password</FormLabel>
-                             <FormInput className="input-mb" type="password" value={ENROLL.state.passwordConfirm} onChange={ENROLL.onChangePasswordConfirm} required/>
+                             <FormInput className="input-mb" id="password_confirm" type="password" onChange={ENROLL.onChangePasswordConfirm} required/>
 
                              <Button className="mint-gradient lrg-btn" type="submit" onClick={ENROLL.onSubmit}>Sign up</Button>
 
