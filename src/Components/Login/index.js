@@ -5,12 +5,15 @@ import {
     FormLabel,
     FormInput,
     Text,
-} from "../Form";
-import {Button} from "../Button.js"
-import {MainBackground, BackgroundImg, Logo} from "../PageBackground"
+    PasswordContainer,
+    TogglePassIcon
+} from "../Global/Form";
+import {Button} from "../Global/Button.js"
+import {MainBackground, BackgroundImg, Logo} from "../Global/PageBackground"
+import usePasswordToggle from "../../Hooks/usePasswordToggle";
 
 function Login() {
-    
+    const [PasswordInputType, ToggleIcon] = usePasswordToggle();
     return (
         <>
             <MainBackground>
@@ -18,17 +21,21 @@ function Login() {
                 <Logo to="/">LOGO</Logo> 
 
                     <FormContainer>
-                        <Form className="login-page" action="#">
-                            <FormH1 className='login-h1' to="/">Login</FormH1>
+                        <Form action="#">
+                            <FormH1 to="/">Login</FormH1>
                             <FormLabel htmlFor="for">Email</FormLabel>
-                            <FormInput type="email" required/>
+                            <FormInput className="login-input-mb" type="email" required/>
+                            
                             <FormLabel htmlFor="for">Password</FormLabel>
-                            <FormInput className='pass' type="password" required/>
-                            <Text className="forgot-pass" to="/forgotpass">Forgot Password?</Text>
 
+                            <PasswordContainer>
+                            <FormInput type={PasswordInputType} required />
+                            <TogglePassIcon>{ToggleIcon} </TogglePassIcon>
+                            </PasswordContainer>
+
+                            <Text className="forgot-pass-link" to="/forgotpass">Forgot Password?</Text>
                             <Button className="mint-gradient med-btn" type="submit">Sign In</Button>
-
-                            <Text to="/signup" className='signup-prompt'>Don't have an account? <Text to="/signup" className='signup-link'>Sign Up</Text></Text>
+                            <Text to="/signup" className='link-prompt'>Don't have an account? <Text to="/signup" className='link'>Sign Up</Text></Text>
                         </Form>
                     </FormContainer>
 

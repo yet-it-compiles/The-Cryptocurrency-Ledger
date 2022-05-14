@@ -1,9 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;600;700&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Lexend", serif;
 }
 
 :root{
@@ -141,8 +142,8 @@ body.dark{
     color: #695CFE;
     margin-left: 70px;
     margin-top: -37px;
-    font-family: "Lucida Grande", Verdana;
-    font-weight:bold;
+
+    font-weight: 500;
     font-size: 20px;
 }
 header .image-text .name {

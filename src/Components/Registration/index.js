@@ -5,10 +5,13 @@ import {
     FormLabel,
     FormInput,
     Text,
-} from "../Form";
-import {Button} from "../Button.js"
-import {MainBackground, BackgroundImg, Logo} from "../PageBackground"
+    PasswordContainer,
+    TogglePassIcon
+} from "../Global/Form";
+import {Button} from "../Global/Button.js"
+import {MainBackground, BackgroundImg, Logo} from "../Global/PageBackground"
 import axios from 'axios';
+import usePasswordToggle from "../../Hooks/usePasswordToggle";
 
 let ENROLL = {
     state: {
@@ -68,6 +71,8 @@ let ENROLL = {
 }
 
 function Registration() {
+    const [PasswordInputType, ToggleIcon] = usePasswordToggle();
+
     return (
         <>
             <MainBackground>
@@ -75,24 +80,31 @@ function Registration() {
                     <Logo to="/">LOGO</Logo>
 
                      <FormContainer>
-                         <Form className="signup-page" action="#">
-                             <FormH1 className="signup-h1" to="/">Create your ledger account</FormH1>
+                         <Form action="#">
+                             <FormH1 to="/">Create your ledger account</FormH1>
 
                              <FormLabel htmlFor="for">Username</FormLabel>
-                             <FormInput className="input-mb" id="username" type="text" onChange={ENROLL.onChangeName} required/>
+                             <FormInput className="signup-input-mb" id="username" type="text" onChange={ENROLL.onChangeName} required/>
 
                              <FormLabel htmlFor="for">Email</FormLabel>
-                             <FormInput className="input-mb" id="email" type="text" onChange={ENROLL.onChangeEmail} required/>
+                             <FormInput className="signup-input-mb" id="email" type="text" onChange={ENROLL.onChangeEmail} required/>
 
                              <FormLabel htmlFor="for">Password</FormLabel>
-                             <FormInput className="input-mb" id="password" type="password" onChange={ENROLL.onChangePassword}  required/>
+
+                             <PasswordContainer>
+                             <FormInput className="signup-input-mb" id="password" type={PasswordInputType} onChange={ENROLL.onChangePassword}  required/>
+                                 <TogglePassIcon>{ToggleIcon} </TogglePassIcon>
+                             </PasswordContainer>
 
                              <FormLabel htmlFor="for">Confirm Password</FormLabel>
-                             <FormInput className="input-mb" id="password_confirm" type="password" onChange={ENROLL.onChangePasswordConfirm} required/>
+
+
+                             <FormInput className="signup-input-mb" id="password_confirm" type={PasswordInputType} onChange={ENROLL.onChangePasswordConfirm} required/>
+
 
                              <Button className="mint-gradient lrg-btn" type="submit" onClick={ENROLL.onSubmit}>Sign up</Button>
 
-                             <Text to="/login" className='signup-prompt'>Already have an account? <Text to="/login" className='link'>Sign In</Text></Text>
+                             <Text to="/login" className='link-prompt'>Already have an account? <Text to="/login" className='link'>Sign In</Text></Text>
                          </Form>
                      </FormContainer>
 
