@@ -1,12 +1,10 @@
 /**
  * This module retrieves the requested cryptocurrency attribute information from the API
  */
-
 import CoinGecko from "coingecko-api";
 
 class CryptocurrencyApi{
     // Creates a connection, and initializes the coingecko API client
-
     CoinGeckoClient = new CoinGecko();
 
     /**
@@ -15,8 +13,6 @@ class CryptocurrencyApi{
      * @param requestedCurrency
      */
     constructor(requestedCryptocurrency = "btc", requestedCurrency= "usd") {
-
-
         this.requestedCryptocurrency = requestedCryptocurrency;
         this.requestedCurrency = requestedCurrency;
 
@@ -24,40 +20,42 @@ class CryptocurrencyApi{
 
     /**
      * Checks the API server status
+     * @returns {Promise<{code: number, data: (Object|*), success: boolean, message: string}>}
      */
     async getServerStatus() {
-        return this.CoinGeckoClient.ping()
+        return this.CoinGeckoClient.ping();
     }
 
     /**
      * Retrieves the current price of any supported cryptocurrency
-     * @returns {Promise<void>}
+     * @returns {Promise<{code: number, data: (Object|*), success: boolean, message: string}>}
      */
     async getPrice() {
-
+        return this.CoinGeckoClient.coins.fetch(this.requestedCryptocurrency);
     }
 
     /**
      * Retrieves a list of all the supported cryptocurrencies
+     * @returns {Promise<{code: number, data: (Object|*), success: boolean, message: string}>}
      */
     async getSupportedCryptocurrencies(){
-
+        return this.CoinGeckoClient.coins.list();
     }
 
     /**
      * Retrieves a list of all the cryptocurrencies id which are able to make API calls
-     * @returns {Promise<void>}
+     * @returns {Promise<{code: number, data: (Object|*), success: boolean, message: string}>}
      */
     async getCryptocurrencyListOfIDs() {
-
+        return this.CoinGeckoClient.coins.all();
     }
 
     /**
      * Retrieves a list of all supported cryptocurrencies: prices, market cap, and volume.
-     * @returns {Promise<void>}
+     * @returns {Promise<{code: number, data: (Object|*), success: boolean, message: string}>}
      */
     async getCryptocurrencyMarkets() {
-
+        return this.CoinGeckoClient.coins.markets();
     }
 
     /**
@@ -70,10 +68,10 @@ class CryptocurrencyApi{
 
     /**
      * Retrieves coin tickers (up to 100 items)
-     * @returns {Promise<void>}
+     * @returns {Promise<{code: number, data: (Object|*), success: boolean, message: string}>}
      */
     async getCryptocurrencyTickers() {
-
+        return this.CoinGeckoClient.coins.fetchTickers();
     }
 
     /**
