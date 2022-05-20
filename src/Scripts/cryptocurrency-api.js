@@ -31,7 +31,7 @@ class CryptocurrencyApi{
      * @returns {Promise<{code: number, data: (Object|*), success: boolean, message: string}>}
      */
     async getPrice() {
-        return this.CoinGeckoClient.coins.fetch(this.requestedCryptocurrency);
+        return this.CoinGeckoClient.coins.fetch(`${this.requestedCryptocurrency}`);
     }
 
     /**
@@ -119,3 +119,20 @@ class CryptocurrencyApi{
     }
 
 }
+
+
+
+//                    ============================ API Testing Code Below  ============================
+let apiTestingObject = new CryptocurrencyApi("Bitcoin");
+
+// Checks to see what the servers' status is
+let serverStatus = apiTestingObject.getServerStatus();
+serverStatus.then(function (pingResult) {
+    console.log(pingResult)
+})
+
+// Retrieves current price
+let  wantedCoin = apiTestingObject.getPrice();
+wantedCoin.then(function (coinResult) {
+    console.log(coinResult)
+})
