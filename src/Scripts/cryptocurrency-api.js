@@ -12,10 +12,10 @@ class CryptocurrencyApi{
      * @param requestedCryptocurrency
      * @param requestedCurrency
      */
-    constructor(requestedCryptocurrency = "btc", requestedCurrency= "usd") {
+    constructor(requestedCryptocurrency = "bitcoin", requestedCurrency= "usd") {
         this.requestedCryptocurrency = requestedCryptocurrency;
         this.requestedCurrency = requestedCurrency;
-
+        console.log(requestedCryptocurrency)
     }
 
     /**
@@ -123,13 +123,14 @@ class CryptocurrencyApi{
 
 
 //                    ============================ API Testing Code Below  ============================
-let apiTestingObject = new CryptocurrencyApi("Bitcoin");
+let apiTestingObject = new CryptocurrencyApi();
 
 // Checks to see what the servers' status is
-let serverStatus = apiTestingObject.getServerStatus();
+
+/*let serverStatus = apiTestingObject.getServerStatus();
 serverStatus.then(function (pingResult) {
     console.log(pingResult)
-})
+})*/
 
 // Retrieves current price
 let  wantedCoin = apiTestingObject.getPrice();
