@@ -71,15 +71,15 @@ class CryptocurrencyApi{
      * @returns {Promise<{code: number, data: (Object|*), success: boolean, message: string}>}
      */
     async getCryptocurrencyTickers() {
-        return this.CoinGeckoClient.coins.fetchTickers();
+        return this.CoinGeckoClient.coins.fetchTickers(this.requestedCryptocurrency);
     }
 
     /**
      * Retrieves historical data: name, price, market, stats through a specified data range
-     * @returns {Promise<void>}
+     * @returns {Promise<{code: number, data: (Object|*), success: boolean, message: string}>}
      */
     async getCryptocurrencyHistory() {
-
+        return this.CoinGeckoClient.coins.fetchHistory(this.requestedCryptocurrency);
     }
 
     /**
@@ -89,10 +89,11 @@ class CryptocurrencyApi{
      * 1 day from current time = 5 minute interval data
      * 1 - 90 days from current time = hourly data
      * above 90 days from current time = daily data (00:00 UTC)
-     * @returns {Promise<void>}
+     *
+     * @returns {Promise<{code: number, data: (Object|*), success: boolean, message: string}>}
      */
     async getCryptocurrencyMarketChart() {
-
+        return this.CoinGeckoClient.coins.fetchMarketChart(this.requestedCryptocurrency);
     }
 
     /**
@@ -103,10 +104,10 @@ class CryptocurrencyApi{
      * 1 - 90 days from current time = hourly data
      * above 90 days from current time = daily data (00:00 UTC)
      *
-     * @returns {Promise<void>}
+     * @returns {Promise<{code: number, data: (Object|*), success: boolean, message: string}>}
      */
     async getCryptocurrencyMarketChartRange() {
-
+        return this.CoinGeckoClient.coins.fetchCoinContractMarketChartRange(this.requestedCryptocurrency);
     }
 
     /**
@@ -116,6 +117,5 @@ class CryptocurrencyApi{
     async getCryptocurrencyOHCL() {
 
     }
-
 
 }
