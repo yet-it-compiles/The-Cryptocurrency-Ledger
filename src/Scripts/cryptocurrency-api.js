@@ -3,23 +3,29 @@
  */
 import CoinGecko from "coingecko-api";
 
-class CryptocurrencyApi{
-    // Creates a connection, and initializes the coingecko API client
+class CryptocurrencyApi {
+    // Initializes the coingecko API client, and declares storage array to keep record of tracked cryptocurrencies
     CoinGeckoClient = new CoinGecko();
+    currentlyTrackedCryptos = [];
 
     /**
      *
      * @param requestedCryptocurrency
      * @param requestedCurrency
      */
-    constructor(requestedCryptocurrency = "bitcoin", requestedCurrency= "usd") {
+    constructor(requestedCryptocurrency = "bitcoin", requestedCurrency = "usd") {
         this.requestedCryptocurrency = requestedCryptocurrency;
         this.requestedCurrency = requestedCurrency;
-        console.log(requestedCryptocurrency)
+
+        // Checks to see if the cryptocurrency is already being tracked, if not, push it to the array
+        if (!(this.currentlyTrackedCryptos.includes(this.requestedCryptocurrency)))
+            this.currentlyTrackedCryptos.push(this.requestedCryptocurrency)
     }
 
     /**
      * Checks the API server status
+     *
+     * code: 200 - Status OK
      * @returns {Promise<{code: number, data: (Object|*), success: boolean, message: string}>}
      */
     async getServerStatus() {
@@ -28,18 +34,22 @@ class CryptocurrencyApi{
 
     /**
      * Retrieves the current price of any supported cryptocurrency
-     * @returns {Promise<{code: number, data: (Object|*), success: boolean, message: string}>}
+     * @returns
      */
     async getPrice() {
-        return this.CoinGeckoClient.coins.fetch(`${this.requestedCryptocurrency}`);
+            return this.CoinGeckoClient.simple.price({
+                ids: this.currentlyTrackedCryptos,
+                vs_currencies: this.requestedCurrency
+            })
     }
 
     /**
-     * Retrieves a list of all the supported cryptocurrencies
+     * TODO: Likely will not need. Understand more of what this is?
+     * Retrieves a list of all the supported vs/comparison cryptocurrencies
      * @returns {Promise<{code: number, data: (Object|*), success: boolean, message: string}>}
      */
-    async getSupportedCryptocurrencies(){
-        return this.CoinGeckoClient.coins.list();
+    async getSupportedCryptocurrencies() {
+        return this.CoinGeckoClient.simple.supportedVsCurrencies();
     }
 
     /**
@@ -47,7 +57,7 @@ class CryptocurrencyApi{
      * @returns {Promise<{code: number, data: (Object|*), success: boolean, message: string}>}
      */
     async getCryptocurrencyListOfIDs() {
-        return this.CoinGeckoClient.coins.all();
+        return this.CoinGeckoClient.coins.list();
     }
 
     /**
@@ -60,9 +70,10 @@ class CryptocurrencyApi{
 
     /**
      * Retrieves current: name, price, and market cap data
-     * @returns {Promise<void>}
+     * @returns {Promise<{code: number, data: (Object|*), success: boolean, message: string}>}
      */
     async getCryptocurrencyCurrentData() {
+        return this.CoinGeckoClient.coins.fetch(this.currentlyTrackedCryptos[0])
 
     }
 
@@ -121,7 +132,6 @@ class CryptocurrencyApi{
 }
 
 
-
 //                    ============================ API Testing Code Below  ============================
 let apiTestingObject = new CryptocurrencyApi();
 
@@ -130,10 +140,24 @@ let apiTestingObject = new CryptocurrencyApi();
 /*let serverStatus = apiTestingObject.getServerStatus();
 serverStatus.then(function (pingResult) {
     console.log(pingResult)
-})*/
+});
+
+let listOfEverything = apiTestingObject.getCryptocurrencyListOfIDs();
+listOfEverything.then(function (listResult) {
+    console.log("\n\n Here are the results: ", listResult)
+})
+
+*/
 
 // Retrieves current price
-let  wantedCoin = apiTestingObject.getPrice();
+let wantedCoin = apiTestingObject.getPrice();
 wantedCoin.then(function (coinResult) {
     console.log(coinResult)
-})
+});
+
+let blah = apiTestingObject.getCryptocurrencyCurrentData()
+blah.then(function (res) {
+    console.log(blah)
+});
+
+
