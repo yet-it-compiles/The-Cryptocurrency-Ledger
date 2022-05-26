@@ -131,8 +131,8 @@ body.dark{
 .sidebar header .profile-name {
     position: absolute;
     color: #695CFE;
-    margin-left: 70px;
-    margin-top: -37px;
+    margin-left: -20px;
+    margin-top: 20px;
 
     font-weight: 500;
     font-size: 20px;
