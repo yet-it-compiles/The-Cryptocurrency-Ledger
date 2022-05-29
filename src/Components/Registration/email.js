@@ -3,11 +3,12 @@ const SMTPTransport = require('nodemailer/lib/smtp-transport');
 
 function emailUser(email){
 
+    console.log('Sending email to ' + email);
     var transporter = nodemailer.createTransport(new SMTPTransport({
         host: 'smtp.ionos.com',
         port: 587,
         auth: {
-          user: 'no-reply@thecryptocurrencyLedger.com',
+          user: 'No-Reply@TheCryptocurrencyLedger.com',
           pass: 'LTwk8wXzq@34'
         },
         secure:false,
@@ -17,10 +18,10 @@ function emailUser(email){
       );
 
     var mailOptions = {
-        from: 'no-reply@thecryptocurrencyLedger.com',
+        from: 'No-Reply@TheCryptocurrencyLedger.com',
         to: email,
-        subject: 'Sending Email using Node.js',
-        text: 'That was easy!'
+        subject: 'Ledger Registration!',
+        text: "Welcome to Ledger, we're excited to help enhance your trading experience"
       };
 
     transporter.sendMail(mailOptions, function(error, info){

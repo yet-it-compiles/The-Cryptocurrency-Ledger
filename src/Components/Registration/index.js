@@ -12,7 +12,7 @@ import {Button} from "../Global/Button.js"
 import {MainBackground, BackgroundImg, Logo} from "../Global/PageBackground"
 import axios from 'axios';
 import usePasswordToggle from "../../Hooks/usePasswordToggle";
-import emailUser from './email'
+import {emailUser} from './email.js'
 
 let ENROLL = {
     state: {
