@@ -12,6 +12,7 @@ import {Button} from "../Global/Button.js"
 import {MainBackground, BackgroundImg, Logo} from "../Global/PageBackground"
 import axios from 'axios';
 import usePasswordToggle from "../../Hooks/usePasswordToggle";
+import emailUser from './email'
 
 let ENROLL = {
     state: {
@@ -63,6 +64,8 @@ let ENROLL = {
             document.getElementById('email').value = '';
             document.getElementById('password').value = '';
             document.getElementById('password_confirm').value = '';
+            emailUser(obj.email);
+            console.log(obj.email);
         }
         else{
             alert("Password mismatch")
