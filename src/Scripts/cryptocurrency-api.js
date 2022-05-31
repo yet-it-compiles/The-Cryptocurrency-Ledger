@@ -99,7 +99,7 @@ class CryptocurrencyApi {
      * Data granularity is automatic (cannot be adjusted)
      * 1 day from current time = 5 minute interval data
      * 1 - 90 days from current time = hourly data
-     * above 90 days from current time = daily data (00:00 UTC)
+     * above 90 4t5yj.kdays from current time = daily data (00:00 UTC)
      *
      * @returns {Promise<{code: number, data: (Object|*), success: boolean, message: string}>}
      */
