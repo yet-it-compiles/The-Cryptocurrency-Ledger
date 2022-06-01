@@ -53,7 +53,7 @@ body.dark{
     --hue-value: 320deg;
 }
 
-.color-property {
+.color-change {
     filter: brightness(var(--brightness)) invert(var(--icon-color-change)) hue-rotate(var(--hue-value));
 }
 
