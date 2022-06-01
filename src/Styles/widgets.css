@@ -1,0 +1,80 @@
+body{
+  background: #6F36FF;
+  color: #fff;
+}
+::selection{
+  color: #fff;
+  background: #6F36FF;
+}
+
+.wrapper{
+  position: absolute;
+  max-width: 572px;
+  height: 286px;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  background: rgba(46, 48, 71, 0.7);
+  border-radius: 15px;
+  transform: translate(-50%, -50%);
+  box-shadow: 10px 10px 15px rgba(0,0,0,0.06);
+}
+.buttons{
+  display: flex;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+}
+button{
+  margin-left: 10px;
+  cursor: pointer;
+  width: 15px;
+  height: 15px;
+  content: icon;
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+.orange{
+  background: #FFAB45;
+}
+.green{
+  background: #3BBA9C;
+}
+.wrapper header{
+  margin-top: 15px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 25px;
+  padding: 17px 30px;
+  text-align: center;
+
+}
+.wrapper header.active{
+  cursor: move;
+  user-select: none;
+}
+
+.crypto-wrapper{
+  margin-top: 20px;
+  display: grid;
+  justify-content: center;
+  grid-template-rows: 60px 60px; 
+  grid-template-columns: 225px 225px; 
+  gap:20px 60px;
+}
+.crypto-1{
+  grid-column: 1;
+  grid-row: 1;
+}
+.crypto-2{
+  grid-column: 2;
+  grid-row: 1;
+}
+.crypto-3{
+  grid-column: 1;
+  grid-row: 2;
+}
+.crypto-4{
+  grid-column: 2;
+  grid-row: 2;
+}

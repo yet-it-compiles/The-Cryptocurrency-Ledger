@@ -18,7 +18,7 @@ function Login() {
         <>
             <MainBackground>
                 <BackgroundImg>
-                <Logo to="/">LOGO</Logo> 
+                <Logo to="/dashboard">LOGO</Logo> 
 
                     <FormContainer>
                         <Form action="#">
