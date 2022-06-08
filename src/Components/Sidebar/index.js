@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import { Bar, Divider, PageLink, PageContainer, PageIcon, PageLabel, Logo, Search, SearchIcon, Theme, ThemeLabel, ThemeToggle, ToggleBtn, SidebarBtn, ThemeIcon } from "./sidebarElements"
-import { logo, searchIcon, dashbaordIcon, portfolioIcon, graphIcon, alarmIcon, simTradingIcon, newsIcon, notesIcon, settingsIcon, signOutIcon, sideBarBtn, sun } from "../../Assets";
+import { logo, searchIcon, dashbaordIcon, portfolioIcon, graphIcon, alarmIcon, simTradingIcon, newsIcon, notesIcon, settingsIcon, signOutIcon, sideBarBtn, sun } from "../../Assets/Images/Dashboard";
 import { ThemeContext } from "../Dashboard/index";
 
 const Sidebar = () => {
@@ -23,7 +23,6 @@ const Sidebar = () => {
         </SearchIcon>
         <input placeholder="Search Crypto" style={!sidebarOpen ? {width: 0, padding: 0} : {}}/>
       </Search>
-      <Divider/>
       {pageArr.map(({icon, label, to}) => (
         <PageContainer key={label}>
           <PageLink to={to} style={!sidebarOpen ? {width: `fit-content`} : {}}>
@@ -36,6 +35,7 @@ const Sidebar = () => {
           </PageLink>
         </PageContainer>
       ))}
+
       {secondaryPageArr.map(({icon, label, to})=> (
         <PageContainer key={label}>
           <PageLink to={to} style={!sidebarOpen ? {width: `fit-content`} : {}}>
@@ -92,15 +92,15 @@ const pageArr = [
     icon: <img src={notesIcon} alt="notes icon"/>,
     to: "/notes",
   },
+
+];
+
+const secondaryPageArr = [
   {
     label: "Settings",
     icon: <img src={settingsIcon} alt="settings icon"/>,
     to: "/settings",
-  }
-];
-
-const secondaryPageArr = [
-
+  },
   {
     label: "Logout",
     icon: <img src={signOutIcon} alt="logout icon"/>,

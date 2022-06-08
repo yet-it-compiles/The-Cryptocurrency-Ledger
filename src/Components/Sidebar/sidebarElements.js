@@ -5,15 +5,20 @@ import { btnReset, v } from "../Global/variables";
 export const Bar = styled.div`
     width: ${({ isOpen }) => !isOpen ? `auto` : v.sidebarWidth};
     background: ${({ theme }) => theme.sidebarColor};
-    height: 100vh;
+    min-height: 100vh;
     padding: ${v.lgSpacing};
+    
+    //Desktop Screen
+    @media screen and (min-width: 1920px) {
+        padding: ${v.lgSpacing};
+    }
 `;
 
 export const Logo = styled.div`
-    width: 52px;
+    width: 5rem;
     cursor: pointer;
-    margin-bottom: ${v.lgSpacing};
-    
+    margin: 0 auto;
+
     img{
         max-width: 100%;
         height: auto;
@@ -25,7 +30,7 @@ export const SidebarBtn = styled.button`
     ${btnReset};
     position: absolute;
     top: ${v.xxlgSpacing};
-    left: ${({ isOpen }) => (isOpen ? `28.5rem` : `9rem`)};
+    left: ${({ isOpen }) => (isOpen ? `23.6rem` : `8.4rem`)};
     width: 3.2rem;
     height: 3.2rem;
     border-radius: 50%;;
@@ -36,18 +41,25 @@ export const SidebarBtn = styled.button`
     justify-content: center;
     cursor: pointer;
     transform: ${({ isOpen }) => !isOpen ? `rotate(180deg)` : `initial`};
+    
+    // Desktop screen
+    @media screen and (min-width: 1920px) {
+        left: ${({ isOpen }) => (isOpen ? `24.8rem` : `9rem`)};
+    }
 `
 
 export const Search = styled.div`
+    margin-top: ${v.lgSpacing};
     background: ${({ theme }) => theme.secondaryColor};
     border-radius: ${v.borderRadius};
     box-shadow: inset 0 .4rem .4rem rgba(0, 0, 0, 0.03);
     display: flex;
+    height: 4.5rem;
 
     input{
         padding: 0 ${v.smSpacing};
         font-family: inherit;
-        font-size: 1.6rem;
+        font-size: 1.4rem;
         width: 100%;
         outline: none;
         border: none;
@@ -69,8 +81,8 @@ export const SearchIcon = styled.button`
     cursor: pointer;
     filter: ${({ theme }) => theme.invert};
 
-    svg{
-        font-size: 2rem;
+    img{
+        height: 2rem;
     }
 `
 
@@ -85,7 +97,8 @@ export const Divider = styled.div`
 export const PageContainer = styled.div`
     background-color: transparent;
     border-radius: ${v.borderRadius};
-    margin: ${v.mdSpacing} 0;
+    margin: ${v.smSpacing} 0;
+    
 
     :hover {
         transition: all ease .3s;
@@ -93,13 +106,16 @@ export const PageContainer = styled.div`
         color: ${({ theme }) => theme.textHoverColor};
         box-shadow: inset 0 .4rem .4rem rgba(0, 0, 0, 0.1);
     }
+    @media screen and (min-width: 1920px) {
+        margin: ${v.mdSpacing} 0;
+    }
 `
 export const PageLink = styled(Link)`
     display: flex;
     align-items: center;
     text-decoration: none;
     color: inherit;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     font-weight: 600;
     padding: calc(${v.smSpacing} - .2rem) 0;
 `;
@@ -109,8 +125,8 @@ export const PageIcon = styled.div`
     display: flex;
     filter: ${({ theme }) => theme.invert};
 
-    svg{
-        font-size: 2.5rem;
+    img {
+        width: 2.5rem;
     }
 `;
 
@@ -129,6 +145,10 @@ export const Theme = styled.div`
 export const ThemeLabel = styled.span`
     display: block;
     flex: 1;
+  ::selection{
+    background-color: ${({ theme }) => theme.primaryColor};
+    color: ${({ theme }) => theme.textHoverColor};
+  }
 `;
 
 export const ThemeToggle = styled.button`

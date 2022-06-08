@@ -7,7 +7,7 @@ body{
   background: #6F36FF;
 }
 
-.wrapper{
+/* .wrapper{
   position: absolute;
   max-width: 572px;
   height: 286px;
@@ -18,14 +18,14 @@ body{
   border-radius: 15px;
   transform: translate(-50%, -50%);
   box-shadow: 10px 10px 15px rgba(0,0,0,0.06);
-}
-.buttons{
+} */
+/* .buttons{
   display: flex;
   position: absolute;
   right: 15px;
   top: 15px;
-}
-button{
+} */
+/* button{
   margin-left: 10px;
   cursor: pointer;
   width: 15px;
@@ -33,13 +33,13 @@ button{
   content: icon;
   border-radius: 50px;
   border: 1px solid rgba(255, 255, 255, 0.5);
-}
-.orange{
+} */
+/* .orange{
   background: #FFAB45;
 }
 .green{
   background: #3BBA9C;
-}
+} */
 .wrapper header{
   margin-top: 15px;
   font-weight: 400;

@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Styles/style.css">
     <link rel="iconsheet" href="../Styles/icons.css">
+    <link rel="stylesheet" href="../Styles/widgets.css">
 
     <!-- Defines the icon pack reference -->
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
@@ -19,7 +20,7 @@
     <!-- Stores the users name -->
     <header>
         <div>
-            <img class="color-property" id="logo-property" src="../Assets/Images/Dashboard/logo.png"
+            <img class="color-property" id="logo-property" src="../Assets/Images/Dashboard/Logo-dark.svg"
                  alt="Profile Pic Icon">
             <span class="text profile-name">User Name</span>
         </div>
@@ -40,7 +41,7 @@
             <ul class="menu-links">
                 <li class="nav-link spaced-out">
                     <a href="#">
-                        <img class="smaller-icon color-property" src="../Assets/Images/Dashboard/Dashboard.png"
+                        <img class="smaller-icon color-property" src="../Assets/Images/Dashboard/Dashboard.svg"
                              alt="Dashboard Icon">
                         <span class="text nav-text" style="font-size: 15px; margin-top: -2px; margin-left: 20%;
                              display: block;">Dashboard</span>
@@ -50,7 +51,7 @@
                 <li class="nav-link spaced-out">
                     <a href="#">
                         <img class="smaller-icon color-property"
-                             src="../Assets/Images/Dashboard/simulated-Trading.png" alt="Simulated Trading Icon">
+                             src="../Assets/Images/Dashboard/Simulated-trading.svg" alt="Simulated Trading Icon">
                         <span class="text nav-text"
                               style="font-size: 15px; margin-top: -2px; margin-left: 19.5%; display: block;">Simulated Trading</span>
                     </a>
@@ -59,7 +60,7 @@
                 <li class="nav-link spaced-out">
                     <a href="#">
                         <img class="smaller-icon color-property"
-                             src="../Assets/Images/Dashboard/graph.png" alt="Charts Icon">
+                             src="../Assets/Images/Dashboard/Graph.svg" alt="Charts Icon">
                         <span class="text nav-text"
                               style="font-size: 15px; margin-top: -2px; margin-left: 20%; display: block;">Charts</span>
                     </a>
@@ -67,7 +68,7 @@
 
                 <li class="nav-link spaced-out">
                     <a href="#">
-                        <img class="smaller-icon color-property" src="../Assets/Images/Dashboard/Portfolio.png"
+                        <img class="smaller-icon color-property" src="../Assets/Images/Dashboard/Portfolio.svg"
                              alt="Portfolio Icon">
                         <span class="text nav-text"
                               style="font-size: 15px; margin-top: -2px; margin-left: 20%; display: block;">Portfolio</span>
@@ -76,7 +77,7 @@
 
                 <li class="nav-link spaced-out">
                     <a href="#">
-                        <img class="smaller-icon color-property" src="../Assets/Images/Dashboard/alarm.png"
+                        <img class="smaller-icon color-property" src="../Assets/Images/Dashboard/Alarm.svg"
                              alt="Alarm Icon">
                         <span class="text nav-text"
                               style="font-size: 15px; margin-top: -2px; margin-left: 20%; display: block;">Alarms</span>
@@ -85,7 +86,7 @@
 
                 <li class="nav-link spaced-out">
                     <a href="#">
-                        <img class="smaller-icon color-property" src="../Assets/Images/Dashboard/News.png"
+                        <img class="smaller-icon color-property" src="../Assets/Images/Dashboard/News.svg"
                              alt="News Icon">
                         <span class="text nav-text"
                               style="font-size: 15px; margin-top: -2px; margin-left: 20%; display: block;">News</span>
@@ -94,7 +95,7 @@
 
                 <li class="nav-link spaced-out">
                     <a href="#">
-                        <img class="smaller-icon color-property" src="../Assets/Images/Dashboard/notes.png"
+                        <img class="smaller-icon color-property" src="../Assets/Images/Dashboard/Notes.svg"
                              alt="Notes Icon">
                         <span class="text nav-text"
                               style="font-size: 15px; margin-top: -2px; margin-left: 20%; display: block;">Notes</span>
@@ -103,7 +104,7 @@
 
                 <li class="nav-link spaced-out">
                     <a href="#">
-                        <img class="smaller-icon color-property" src="../Assets/Images/Dashboard/Settings.png"
+                        <img class="smaller-icon color-property" src="../Assets/Images/Dashboard/Settings.svg"
                              alt="Settings Icon">
                         <span class="text nav-text"
                               style="font-size: 15px; margin-top: -2px; margin-left: 20%; display: block;">Settings</span>
@@ -116,7 +117,7 @@
         <div class="bottom-content">
             <li class="">
                 <a href="#">
-                    <img class="smaller-icon color-property" src="../Assets/Images/Dashboard/sign-out.png"
+                    <img class="smaller-icon color-property" src="../Assets/Images/Dashboard/Sign-out.svg"
                          alt="Sign-out Icon">
                     <span class="text nav-text"
                           style="font-size: 16px; margin-top: -2px; margin-left: 20%; display: block;">Logout</span>
@@ -144,7 +145,44 @@
 <!-- Declares the page title -->
 <section class="home">
     <div class="text">Dashboard</div>
+    <div class="wrapper widget1">
+        <div class="buttons">
+            <button class="orange"></button>
+            <button class="green"></button>
+        </div>
+        <header>
+            Top Earners
+        </header>
+        <div class="crypto-wrapper">
+            <img class="crypto-1" src="../Assets/Images/Widgets/bitcoin.svg" alt="">
+            <img class="crypto-2" src="../Assets/Images/Widgets/sol.svg" alt="">
+            <img class="crypto-3" src="../Assets/Images/Widgets/eth.svg" alt="">
+            <img class="crypto-4" src="../Assets/Images/Widgets/shiba.svg" alt="">
+        </div>
+    </div>
+
 </section>
+
+<script>
+    const wrapper = document.querySelector(".wrapper"),
+    header = wrapper.querySelector("header");
+
+    function onDrag({movementX, movementY}){
+      let getStyle = window.getComputedStyle(wrapper);
+      let leftVal = parseInt(getStyle.left);
+      let topVal = parseInt(getStyle.top);
+      wrapper.style.left = `${leftVal + movementX}px`;
+      wrapper.style.top = `${topVal + movementY}px`;
+    }
+    wrapper.addEventListener("mousedown", ()=>{
+      wrapper.classList.add("active");
+      wrapper.addEventListener("mousemove", onDrag);
+    });
+    document.addEventListener("mouseup", ()=>{
+      wrapper.classList.remove("active");
+      wrapper.removeEventListener("mousemove", onDrag);
+    });
+  </script>
 
 <script src="../Scripts/script.js"></script>
 </body>

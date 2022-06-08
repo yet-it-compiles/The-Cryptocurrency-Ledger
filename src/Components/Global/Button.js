@@ -28,8 +28,31 @@ export const Button = styled.button`
     transform: scale(1.1);
     transition: 500ms ease-in-out;
   }
+  &.solid-mint {
+    background-color: #47DBB8;
+    color: #fff;
+  }
 
   //Laptop Screen
+  &.widget-med-btn {
+    width: 25rem;
+    height: 3rem;
+    font-size: 1.6rem;
+    :hover {
+      transition: 500ms ease;
+      transform: scale(1.05);
+    }
+  }
+  &.widget-lrg-btn {
+    width: 22.4rem;
+    height: 4rem;
+    font-size: 1.6rem;
+    :hover {
+      transition: 500ms ease;
+      transform: scale(1.05);
+    }
+  }
+
   &.med-btn {
     width: 13rem;
     height: 3.2rem;

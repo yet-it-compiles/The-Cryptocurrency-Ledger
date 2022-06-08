@@ -1,11 +1,19 @@
 import Sidebar from '../../Sidebar'
-import { Container, Main } from './layoutElements'
-
-const Layout = ({children}) => {
+import { Container, Main, Header } from './layoutElements'
+import WidgetLayout from './widgetLayout'
+import { AddWidget } from '../../../Assets/Images/Widgets'
+import { AddWidgetBtn } from './layoutElements'
+const Layout = () => {
   return (
     <Container>
         <Sidebar/>
-        <Main>{children}</Main>
+        <Main>
+          <Header>Dashboard</Header>
+          <WidgetLayout/>
+          <AddWidgetBtn>
+            <img src={AddWidget} alt="add widget button"/>
+          </AddWidgetBtn>
+        </Main>
     </Container>
   )
 }
