@@ -1,9 +1,20 @@
+/**
+ * This module fires off emails to the supplied email address using our no-reply account
+ */
 var nodemailer = require('nodemailer');
 const SMTPTransport = require('nodemailer/lib/smtp-transport');
 
+/** 
+ * Sends email to the passed in email address 
+ * @param String email Email to contact
+ */
+
 function emailUser(email){
 
-    console.log('Sending email to ' + email);
+ 
+ // Instantiates transporter device to send email with
+ // correct SMTP parameters
+
     var transporter = nodemailer.createTransport(new SMTPTransport({
         host: 'smtp.ionos.com',
         port: 587,
@@ -16,7 +27,7 @@ function emailUser(email){
         debug:true
       })
       );
-
+// Populate more mailOptions, this will later be made more dynamic
     var mailOptions = {
         from: 'No-Reply@TheCryptocurrencyLedger.com',
         to: email,
@@ -33,5 +44,6 @@ function emailUser(email){
       }); 
 }
 
+// Exports this package so it can be can easily be called from other scripts
 exports.emailUser = emailUser;
 
