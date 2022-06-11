@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Helmet } from "react-helmet";
 import { lightTheme, darkTheme } from "../Theme";
-import { GlobalStyle } from "../Global/globalStyles";
+import { GlobalStyle } from "../Global/global-styles";
 import { ThemeProvider } from "styled-components";
 import Layout from "./Layout"
 

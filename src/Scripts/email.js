@@ -6,7 +6,7 @@ const SMTPTransport = require('nodemailer/lib/smtp-transport');
 
 /** 
  * Sends email to the passed in email address 
- * @param String email Email to contact
+ * @param String email email address to send mail to.
  */
 
 function emailUser(email){

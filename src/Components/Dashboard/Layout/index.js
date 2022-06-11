@@ -1,8 +1,8 @@
 import Sidebar from '../../Sidebar'
-import { Container, Main, Header } from './layoutElements'
-import WidgetLayout from './widgetLayout'
+import { Container, Main, Header } from './layout-elements'
+import WidgetLayout from './widget-layout'
 import { AddWidget } from '../../../Assets/Images/Widgets'
-import { AddWidgetBtn } from './layoutElements'
+import { AddWidgetBtn } from './layout-elements'
 const Layout = () => {
   return (
     <Container>

@@ -7,12 +7,12 @@ import {
     Text,
     PasswordContainer,
     TogglePassIcon
-} from "../Global/Form";
-import {Button} from "../Global/Button.js"
-import {MainBackground, BackgroundImg, Logo} from "../Global/PageBackground"
+} from "../Global/form";
+import {Button} from "../Global/button.js"
+import {MainBackground, BackgroundImg, Logo} from "../Global/page-background"
 import axios from 'axios';
 import usePasswordToggle from "../../Hooks/usePasswordToggle";
-import {emailUser} from './email.js'
+import {emailUser} from '../../Scripts/email.js'
 
 let ENROLL = {
     state: {

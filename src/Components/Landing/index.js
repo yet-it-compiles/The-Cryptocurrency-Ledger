@@ -1,5 +1,5 @@
 
-import {SignUpBtn, Chicken} from "../Chicken"
+import {SignUpBtn, Chicken} from "../chicken"
 
 function Landing() {
     
