@@ -6,9 +6,9 @@ import {
     FormLabel,
     FormInput,
     Text,
-} from "../Global/Form";
-import {Button} from "../Global/Button.js"
-import {MainBackground, BackgroundImg, Logo} from "../Global/PageBackground"
+} from "../Global/form";
+import {Button} from "../Global/button.js"
+import {MainBackground, BackgroundImg, Logo} from "../Global/page-background"
 
 function ForgotPassword() {
     

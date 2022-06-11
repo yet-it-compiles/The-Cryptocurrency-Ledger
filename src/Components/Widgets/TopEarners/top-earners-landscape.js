@@ -1,6 +1,6 @@
 import { bitcoin, eth, sol, shiba } from '../../../Assets/Images/Widgets';
 import styled from 'styled-components'
-import { Button } from '../../Global/Button';
+import { Button } from '../../Global/button';
 
 const TopEarnersLandscape = () => {
 

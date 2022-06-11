@@ -1,6 +1,6 @@
 import { bitcoin, eth, sol, shiba, tether } from '../../../Assets/Images/Widgets';
 import styled from 'styled-components'
-import { Button } from '../../Global/Button';
+import { Button } from '../../Global/button';
 const TopEarnersPortrait = () => {
 
     const Wrapper = styled.div`
