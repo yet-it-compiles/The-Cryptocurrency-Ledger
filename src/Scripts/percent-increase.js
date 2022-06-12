@@ -31,7 +31,7 @@ class PercentIncreaseCalculator {
 }
 
 
-calculator = new PercentIncreaseCalculator(0, 1);
+const calculator = new PercentIncreaseCalculator(0, 1);
 
 console.log("Percent Increase: " + calculator.calculatePercentIncrease())
 console.log("Difference: " + calculator.calculateDifference().toFixed(2))

@@ -1,12 +1,13 @@
 /**
  * This module fires off emails to the supplied email address using our no-reply account
  */
+
 var nodemailer = require('nodemailer');
 const SMTPTransport = require('nodemailer/lib/smtp-transport');
 
 /** 
  * Sends email to the passed in email address 
- * @param String email email address to send mail to.
+ * @param {String} email email address to send mail to.
  */
 
 function emailUser(email){
