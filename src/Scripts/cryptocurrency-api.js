@@ -149,7 +149,7 @@ listOfEverything.then(function (listResult) {
 
 */
 
-// Retrieves current price
+// Retrieves:  current price
 let wantedCoin = apiTestingObject.getPrice();
 wantedCoin.then(function (coinResult) {
     console.log(coinResult)

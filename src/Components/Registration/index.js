@@ -11,7 +11,7 @@ import {
 import {Button} from "../Global/button.js"
 import {MainBackground, BackgroundImg, Logo} from "../Global/page-background"
 import axios from 'axios';
-import usePasswordToggle from "../../Hooks/usePasswordToggle";
+import usePasswordToggle from "../../Hooks/use-password-toggle";
 import {emailUser} from '../../Scripts/email.js'
 
 let ENROLL = {

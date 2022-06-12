@@ -10,7 +10,7 @@ import {
 } from "../Global/form";
 import {Button} from "../Global/button.js"
 import {MainBackground, BackgroundImg, Logo} from "../Global/page-background"
-import usePasswordToggle from "../../Hooks/usePasswordToggle";
+import usePasswordToggle from "../../Hooks/use-password-toggle";
 
 function Login() {
     const [PasswordInputType, ToggleIcon] = usePasswordToggle();
