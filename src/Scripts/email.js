@@ -37,6 +37,8 @@ function emailUser(email){
       };
 
     transporter.sendMail(mailOptions, function(error, info){
+        
+        // Debug mode on or off
         if (error) {
           console.log(error);
         } else {
