@@ -1,23 +1,21 @@
-// This may need to be moved to the file that calls the texting function
+/* Simple module which sends a text message to the user */
+// TODO This may need to be moved to the file that calls the texting function
 const twilio = require('twilio');
-
 
 /**
  * Sends a text message to the desired number using twilio
- * @param msg Message body
- * @param phone_numb Receiving number must take the format +13608700249
+ * @param messageToSend Message body
+ * @param numberToSendMessageTo Receiving number must take the format +13608700249
  */
+function sendText(messageToSend, numberToSendMessageTo) {
+    const ACCOUNT_SID = 'ACa549395e04c000a1654c6110e1ff3d2d'; // Your Account SID from www.twilio.com/console
+    const AUTHORIZATION_TOKEN = 'de97d9b2bfd646524e4fd8bf611db3df'; // Your Auth Token from www.twilio.com/console
+    const CLIENT = new twilio(ACCOUNT_SID, AUTHORIZATION_TOKEN);
 
-function sendText(msg,phone_numb){
-
-    const accountSid = 'ACa549395e04c000a1654c6110e1ff3d2d'; // Your Account SID from www.twilio.com/console
-    const authToken = 'de97d9b2bfd646524e4fd8bf611db3df'; // Your Auth Token from www.twilio.com/console
-
-    const client = new twilio(accountSid, authToken);
-    client.messages
+    CLIENT.messages
         .create({
             body: body,
-            to: phone_numb, // Text this number
+            to: numberToSendMessageTo, // Text this number
             from: '+19403948775', // From a valid Twilio number
         })
         .then((message) => console.log(message.sid)); // To confirm message was sent
