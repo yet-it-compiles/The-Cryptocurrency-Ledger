@@ -9,7 +9,7 @@ const SMTPTRANSPORT = require('nodemailer/lib/smtp-transport');
  * Sends email to the passed in email address
  * @param {String} email is the email address the user has on file
  */
-function sendsEmailToUser(email){
+function sendsEmailToUser(email) {
     instantiateTransporter()
 
     // Populate more mailOptions, this will later be made more dynamic
@@ -20,7 +20,7 @@ function sendsEmailToUser(email){
         text: "Welcome to The Cryptocurrency Ledger! \n\tWe're excited to help enhance your trading experience."
     };
 
-    transporter.sendMail(mailOptions, function(error, info){
+    transporter.sendMail(mailOptions, function (error, info) {
         // Debug mode on or off
         if (error) {
             console.log(error);
@@ -31,7 +31,7 @@ function sendsEmailToUser(email){
 }
 
 /**
- * // Instantiates transporter device to send email with the correct SMTP parameters
+ * Instantiates transporter device to send email with the correct SMTP parameters
  */
 function instantiateTransporter() {
     let transporter = nodemailer.createTransport(new SMTPTRANSPORT({
@@ -41,9 +41,9 @@ function instantiateTransporter() {
             user: 'No-Reply@TheCryptocurrencyLedger.com',
             pass: 'LTwk8wXzq@34'
         },
-        secure:false,
+        secure: false,
         tls: {rejectUnauthorized: false},
-        debug:true
+        debug: true
     }));
 }
 
