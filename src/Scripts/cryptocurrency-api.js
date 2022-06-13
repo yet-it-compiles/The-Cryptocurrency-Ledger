@@ -96,12 +96,6 @@ class CryptocurrencyApi {
 
     /**
      * Retrieves historical market data: price, market cap, and 24hr volume (granularity auto)
-     *
-     * Data granularity is automatic (cannot be adjusted)
-     * 1 day from current time = 5 minute interval data
-     * 1 - 90 days from current time = hourly data
-     * above 90 4t5yj.kdays from current time = daily data (00:00 UTC)
-     *
      * @returns {Promise<{code: number, data: (Object|*), success: boolean, message: string}>}
      */
     async getCryptocurrencyMarketChart() {
@@ -134,8 +128,9 @@ class CryptocurrencyApi {
 
 
 //                    ============================ API Testing Code Below  ============================
+// names of currencies must be lowercase!
 
-let apiTestingObject = new CryptocurrencyApi(); // default BTC & USD
+let apiTestingObject = new CryptocurrencyApi("ethereum"); // default BTC & USD
 // let apiTestingObject = new CryptocurrencyApi('Dogecoin', "jpy"); // override to Dogecoin & Yen
 
 
@@ -169,7 +164,33 @@ listOfIDS.then(function (IDResult) {
 */
 
 // Retrieves information about many supported cryptocurrencies
+/*
 let cryptoMarket = apiTestingObject.getCryptocurrencyMarkets();
 cryptoMarket.then(function (marketTest) {
     console.log(marketTest)
 })
+*/
+
+// Retrieves current: name, price, and market cap data
+/*
+let currentDataTest = apiTestingObject.getCryptocurrencyCurrentData();
+currentDataTest.then(function (currentResult) {
+    console.log(currentResult)
+})
+*/
+
+// Retrieves coin tickers (up to 100 items)
+/*
+let tickerTest = apiTestingObject.getCryptocurrencyTickers()
+tickerTest.then(function (tickerResult) {
+    console.log(tickerResult)
+})
+*/
+
+// TODO - Understand how to pass in date
+/*
+let priceHistoryTest = apiTestingObject.getCryptocurrencyHistory(25-12-2021)
+priceHistoryTest.then(function (historyResult) {
+    console.log(historyResult)
+})
+*/
