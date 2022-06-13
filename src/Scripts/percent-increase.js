@@ -30,7 +30,7 @@ class PercentIncreaseCalculator {
     }
 }
 
-
+//                    ============================ Calculations Testing  ============================
 const calculator = new PercentIncreaseCalculator(0, 1);
 
 console.log("Percent Increase: " + calculator.calculatePercentIncrease())
