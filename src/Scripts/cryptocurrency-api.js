@@ -1,6 +1,7 @@
 /**
  * This module retrieves the requested cryptocurrency attribute information from the API
  */
+
 import CoinGecko from "coingecko-api";
 
 class CryptocurrencyApi {
@@ -9,9 +10,9 @@ class CryptocurrencyApi {
     currentlyTrackedCryptos = [];
 
     /**
-     *
-     * @param requestedCryptocurrency
-     * @param requestedCurrency
+     * Parameterized constructor which initializes the API object. If no parameter is dgiven it assumes BTC and USD
+     * @param requestedCryptocurrency is the desired cryptocurrency by its name
+     * @param requestedCurrency is the desired currency to translate to. Default is USD
      */
     constructor(requestedCryptocurrency = "bitcoin", requestedCurrency = "usd") {
         this.requestedCryptocurrency = requestedCryptocurrency;
@@ -34,7 +35,7 @@ class CryptocurrencyApi {
 
     /**
      * Retrieves the current price of any supported cryptocurrency
-     * @returns
+     * @returns the current price of the cryptocurrency
      */
     async getPrice() {
             return this.CoinGeckoClient.simple.price({
@@ -133,31 +134,42 @@ class CryptocurrencyApi {
 
 
 //                    ============================ API Testing Code Below  ============================
-let apiTestingObject = new CryptocurrencyApi();
+
+let apiTestingObject = new CryptocurrencyApi(); // default BTC & USD
+// let apiTestingObject = new CryptocurrencyApi('Dogecoin', "jpy"); // override to Dogecoin & Yen
+
 
 // Checks to see what the servers' status is
+/*
+let serverStatus = apiTestingObject.getServerStatus();
 
-/*let serverStatus = apiTestingObject.getServerStatus();
 serverStatus.then(function (pingResult) {
     console.log(pingResult)
 });
-
-let listOfEverything = apiTestingObject.getCryptocurrencyListOfIDs();
-listOfEverything.then(function (listResult) {
-    console.log("\n\n Here are the results: ", listResult)
-})
-
 */
 
-// Retrieves:  current price
-let wantedCoin = apiTestingObject.getPrice();
-wantedCoin.then(function (coinResult) {
-    console.log(coinResult)
-});
+// Returns the current price of the desired currency
+let currentPriceTesting = apiTestingObject.getPrice()
+currentPriceTesting.then(function (priceResult) {
+    console.log(priceResult)
+})
 
-let blah = apiTestingObject.getCryptocurrencyCurrentData()
-blah.then(function (res) {
-    console.log(blah)
-});
+// Returns an array of the supposed cryptocurrencies by their symbol
+/*
+let supportedCryptos = apiTestingObject.getSupportedCryptocurrencies()
+supportedCryptos.then(function (supportResult) {
+    console.log(supportResult)
+})*/
 
+/*
+let listOfIDS = apiTestingObject.getCryptocurrencyListOfIDs()
+listOfIDS.then(function (IDResult) {
+    console.log(IDResult)
+})
+*/
 
+// Retrieves information about many supported cryptocurrencies
+let cryptoMarket = apiTestingObject.getCryptocurrencyMarkets();
+cryptoMarket.then(function (marketTest) {
+    console.log(marketTest)
+})
