@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
-import { Bar, Divider, PageLink, PageContainer, PageIcon, PageLabel, Logo, Search, SearchIcon, Theme, ThemeLabel, ThemeToggle, ToggleBtn, SidebarBtn, ThemeIcon } from "./sidebar-elements"
-import { logo, searchIcon, dashbaordIcon, portfolioIcon, graphIcon, alarmIcon, simTradingIcon, newsIcon, notesIcon, settingsIcon, signOutIcon, sideBarBtn, sun } from "../../Assets/Images/Dashboard";
-import { ThemeContext } from "../Dashboard/index";
+import { Bar, Divider, PageLink, PageContainer, PageIcon, PageLabel, Logo, Search, SearchIcon, Theme, ThemeLabel, ThemeToggle, ToggleBtn, SidebarBtn } from "./sidebar-elements"
+import { logo, dashboardIcon, searchIcon, portfolioIcon, graphIcon, alarmIcon, simTradingIcon, newsIcon, notesIcon, settingsIcon, signOutIcon, sideBarBtn } from "../../Assets/Images/Dashboard/dashboard-assets.js";
+import { ThemeContext } from "../Dashboard/dashboard.js";
 
 const Sidebar = () => {
   const { setTheme, theme } = useContext(ThemeContext);
@@ -59,7 +59,7 @@ const Sidebar = () => {
 const pageArr = [
   {
     label: "Dashboard",
-    icon: <img src={dashbaordIcon} alt="dashboard icon"/>,
+    icon: <img src={dashboardIcon} alt="dashboard icon"/>,
     to: "/dashboard",
   },
   {

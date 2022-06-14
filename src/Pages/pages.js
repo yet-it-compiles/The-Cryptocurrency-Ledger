@@ -1,0 +1,5 @@
+export {default as LoginPage} from "./login-page.js"
+export {default as RegistrationPage} from "./registration-page.js"
+export {default as LandingPage} from "./landing-page.js"
+export {default as ForgotPassPage} from "./forgot-pass-page.js"
+export {default as DashboardPage} from "./dashboard-page.js"

@@ -1,5 +1,0 @@
-export {default as LoginPage} from "./login"
-export {default as RegistrationPage} from "./registration"
-export {default as LandingPage} from "./landing"
-export {default as ForgotPassPage} from "./forgot-pass"
-export {default as DashboardPage} from "./dashboard"

@@ -1,15 +1,15 @@
 import {
     FormContainer,
-    Form,
+    FormElements,
     FormH1,
     FormLabel,
     FormInput,
     Text,
     PasswordContainer,
     TogglePassIcon
-} from "../Global/form";
-import {Button} from "../Global/button.js"
-import {MainBackground, BackgroundImg, Logo} from "../Global/page-background"
+} from "../Global/form-elements.js";
+import {ButtonElements} from "../Global/button-elements.js"
+import {MainBackground, BackgroundImg, Logo} from "../Global/background-elements.js"
 import usePasswordToggle from "../../Hooks/use-password-toggle";
 
 function Login() {
@@ -21,7 +21,7 @@ function Login() {
                 <Logo to="/dashboard">LOGO</Logo> 
 
                     <FormContainer>
-                        <Form action="#">
+                        <FormElements action="#">
                             <FormH1 to="/">Login</FormH1>
                             <FormLabel htmlFor="for">Email</FormLabel>
                             <FormInput className="login-input-mb" type="email" required/>
@@ -34,9 +34,9 @@ function Login() {
                             </PasswordContainer>
 
                             <Text className="forgot-pass-link" to="/forgotpass">Forgot Password?</Text>
-                            <Button className="mint-gradient med-btn" type="submit">Sign In</Button>
+                            <ButtonElements className="mint-gradient med-btn" type="submit">Sign In</ButtonElements>
                             <Text to="/signup" className='link-prompt'>Don't have an account? <Text to="/signup" className='link'>Sign Up</Text></Text>
-                        </Form>
+                        </FormElements>
                     </FormContainer>
 
                 </BackgroundImg>

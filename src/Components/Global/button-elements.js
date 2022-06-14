@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const Button = styled.button`
+export const ButtonElements = styled.button`
   margin: 0 auto;
   text-align: center;
   text-transform: uppercase;

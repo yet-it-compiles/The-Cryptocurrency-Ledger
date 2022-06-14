@@ -8,7 +8,7 @@ export const FormContainer = styled.div`
 
 `;
 
-export const Form = styled.div`
+export const FormElements = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;

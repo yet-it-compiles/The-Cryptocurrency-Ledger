@@ -1,4 +1,4 @@
-import ForgotPassword from '../Components/ForgotPassword'
+import { ForgotPassword } from '../Components/components.js'
 const ForgotPassPage = () => {
   return (
     <div>

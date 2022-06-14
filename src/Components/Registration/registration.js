@@ -1,15 +1,15 @@
 import {
     FormContainer,
-    Form,
+    FormElements,
     FormH1,
     FormLabel,
     FormInput,
     Text,
     PasswordContainer,
     TogglePassIcon
-} from "../Global/form";
-import {Button} from "../Global/button.js"
-import {MainBackground, BackgroundImg, Logo} from "../Global/page-background"
+} from "../Global/form-elements.js";
+import {ButtonElements} from "../Global/button-elements.js"
+import {MainBackground, BackgroundImg, Logo} from "../Global/background-elements.js"
 import axios from 'axios';
 import usePasswordToggle from "../../Hooks/use-password-toggle";
 import {emailUser} from '../../Scripts/email.js'
@@ -83,7 +83,7 @@ function Registration() {
                     <Logo to="/">LOGO</Logo>
 
                      <FormContainer>
-                         <Form action="#">
+                         <FormElements action="#">
                              <FormH1 to="/">Create your ledger account</FormH1>
 
                              <FormLabel htmlFor="for">Username</FormLabel>
@@ -105,10 +105,10 @@ function Registration() {
                              <FormInput className="signup-input-mb" id="password_confirm" type={PasswordInputType} onChange={ENROLL.onChangePasswordConfirm} required/>
 
 
-                             <Button className="mint-gradient lrg-btn" type="submit" onClick={ENROLL.onSubmit}>Sign up</Button>
+                             <ButtonElements className="mint-gradient lrg-btn" type="submit" onClick={ENROLL.onSubmit}>Sign up</ButtonElements>
 
                              <Text to="/login" className='link-prompt'>Already have an account? <Text to="/login" className='link'>Sign In</Text></Text>
-                         </Form>
+                         </FormElements>
                      </FormContainer>
 
                 </BackgroundImg>

@@ -1,4 +1,4 @@
-import Login from '../Components/Login'
+import { Login } from '../Components/components.js'
 const LoginPage = () => {
   return (
     <div>

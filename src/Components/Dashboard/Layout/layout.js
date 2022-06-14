@@ -1,7 +1,7 @@
-import Sidebar from '../../Sidebar'
+import Sidebar from '../../Sidebar/sidebar.js'
 import { Container, Main, Header } from './layout-elements'
 import WidgetLayout from './widget-layout'
-import { AddWidget } from '../../../Assets/Images/Widgets'
+import { AddWidget } from '../../../Assets/Images/Widgets/widget-assets.js'
 import { AddWidgetBtn } from './layout-elements'
 const Layout = () => {
   return (

@@ -1,6 +1,6 @@
-import { bitcoin, eth, sol, shiba, tether } from '../../../Assets/Images/Widgets';
+import { bitcoin, eth, sol, shiba, tether } from '../../../Assets/Images/Widgets/widget-assets.js';
 import styled from 'styled-components'
-import { Button } from '../../Global/button';
+import { ButtonElements } from '../../Global/button-elements.js';
 const TopEarnersPortrait = () => {
 
     const Wrapper = styled.div`
@@ -33,7 +33,7 @@ const TopEarnersPortrait = () => {
         cursor: pointer;
         width: 15px;
         height: 15px;
-        content: icon;
+        content: '';
         border-radius: 50px;
         border: 1px solid rgba(255, 255, 255, 0.5);
     
@@ -112,7 +112,7 @@ const TopEarnersPortrait = () => {
                     <img src={ tether } alt="tether"/>
                 </Crypto5>
             </CryptoWrapper>
-            <Button className='solid-mint widget-lrg-btn'>Show More</Button>
+            <ButtonElements className='solid-mint widget-lrg-btn'>Show More</ButtonElements>
         </Wrapper>
       </>
   );

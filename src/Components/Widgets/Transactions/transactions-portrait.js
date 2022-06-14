@@ -1,4 +1,4 @@
-import { inTransaction, outTransaction } from '../../../Assets/Images/Widgets';
+import { inTransaction, outTransaction } from '../../../Assets/Images/Widgets/widget-assets.js';
 import styled from 'styled-components'
 
 const TransactionsPortrait = () => {
@@ -41,7 +41,7 @@ const TransactionsPortrait = () => {
         cursor: pointer;
         width: 15px;
         height: 15px;
-        content: icon;
+        content: '';
         border-radius: 50px;
         border: 1px solid rgba(255, 255, 255, 0.5);
     

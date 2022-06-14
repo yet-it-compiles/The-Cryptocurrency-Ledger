@@ -1,6 +1,6 @@
 /* Simple module which allows the transition to different pages from the dashboard */
 import "./Styles/global-styles.css";
-import { LoginPage, RegistrationPage, LandingPage, ForgotPassPage, DashboardPage } from "./Pages";
+import { LoginPage, RegistrationPage, LandingPage, ForgotPassPage, DashboardPage } from "./Pages/pages.js";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {

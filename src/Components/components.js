@@ -1,0 +1,5 @@
+export { default as Login } from "./Login/login.js"
+export {default as Registration} from "./Registration/registration.js"
+export {default as Landing} from "./Landing/landing.js"
+export {default as Dashboard} from "./Dashboard/dashboard.js"
+export {default as ForgotPassword} from "./ForgotPassword/forgot-pass.js"
