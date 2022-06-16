@@ -12,7 +12,7 @@ import {ButtonElements} from "../Global/button-elements.js"
 import {MainBackground, BackgroundImg, Logo} from "../Global/background-elements.js"
 import axios from 'axios';
 import usePasswordToggle from "../../Hooks/use-password-toggle";
-import {emailUser} from '../../Scripts/email.js'
+import {sendsEmailToUser} from '../../Scripts/send-email.js'
 
 let ENROLL = {
     state: {
@@ -64,7 +64,7 @@ let ENROLL = {
             document.getElementById('email').value = '';
             document.getElementById('password').value = '';
             document.getElementById('password_confirm').value = '';
-            emailUser(obj.email);
+            sendsEmailToUser(obj.email);
             console.log(obj.email);
         }
         else{

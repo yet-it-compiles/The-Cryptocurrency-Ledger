@@ -10,7 +10,7 @@ const SMTPTRANSPORT = require('nodemailer/lib/smtp-transport');
  * @param {String} email is the email address the user has on file
  */
 function sendsEmailToUser(email) {
-    instantiateTransporter()
+    let transporter = instantiateTransporter()
 
     // Populate more mailOptions, this will later be made more dynamic
     let mailOptions = {
@@ -45,7 +45,9 @@ function instantiateTransporter() {
         tls: {rejectUnauthorized: false},
         debug: true
     }));
+    return transporter;
 }
+
 
 // Exports this package, so it can be can easily be called from other scripts
 exports.emailUser = sendsEmailToUser;
