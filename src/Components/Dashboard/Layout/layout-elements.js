@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { v } from "../../Global/variables";
+import {v} from "../../Global/variables";
 
 export const Container = styled.div`
     display: flex;
@@ -12,8 +12,8 @@ export const Header = styled.h1`
     font-size: 3.2rem;
 
     ::selection{
-        background-color: ${({ theme }) => theme.primaryLight};
-        color: ${({ theme }) => theme.textHoverLight};
+        background-color: ${({theme}) => theme.primaryLight};
+        color: ${({theme}) => theme.textHoverLight};
     }
 `
 
