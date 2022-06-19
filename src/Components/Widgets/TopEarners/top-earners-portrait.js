@@ -1,6 +1,7 @@
-import { bitcoin, eth, sol, shiba, tether } from '../../../Assets/Images/Widgets/widget-assets.js';
+import {bitcoin, eth, sol, shiba, tether} from '../../../Assets/Images/Widgets/widget-assets.js';
 import styled from 'styled-components'
-import { ButtonElements } from '../../Global/button-elements.js';
+import {ButtonElements} from '../../Global/button-elements.js';
+
 const TopEarnersPortrait = () => {
 
     const Wrapper = styled.div`
@@ -28,7 +29,7 @@ const TopEarnersPortrait = () => {
         right: 15px;
         top: 15px;
     `
-     const Btn = styled.button`
+    const Btn = styled.button`
         margin-left: 10px;
         cursor: pointer;
         width: 15px;
@@ -44,7 +45,7 @@ const TopEarnersPortrait = () => {
             background: #3BBA9C;
         }
     `
-     const Header = styled.h1`
+    const Header = styled.h1`
         cursor: pointer;
         margin-top: 15px;
         font-weight: 400;
@@ -59,7 +60,7 @@ const TopEarnersPortrait = () => {
             user-select: none;
         }
     `
-     const CryptoWrapper = styled.div`
+    const CryptoWrapper = styled.div`
         display: grid;
         justify-content: center;
         grid-template-rows: 60px 60px; 
@@ -67,55 +68,55 @@ const TopEarnersPortrait = () => {
         gap: 20px 0;
         margin-bottom: 15px;
     `
-     const Crypto1 = styled.div`
+    const Crypto1 = styled.div`
         grid-column: 1;
         grid-row: 1;
     `
-     const Crypto2 = styled.div`
+    const Crypto2 = styled.div`
         grid-column: 1;
         grid-row: 2;
     `
-     const Crypto3 = styled.div`
+    const Crypto3 = styled.div`
         grid-column: 1;
         grid-row: 3;
     `
-     const Crypto4 = styled.div`
+    const Crypto4 = styled.div`
         grid-column: 1;
         grid-row: 4;
     `
-     const Crypto5 = styled.div`
+    const Crypto5 = styled.div`
         grid-column: 1;
         grid-row: 5;
     `
-  return (
-      <>
-        <Wrapper>
-            <Buttons>
-                <Btn className="orange"></Btn>
-                <Btn className="green"></Btn>
-            </Buttons>
-            <Header>Top Earners</Header>
-            <CryptoWrapper>
-                <Crypto1>
-                    <img src={ bitcoin } alt="bitcoin"/>
-                </Crypto1>
-                <Crypto2>
-                    <img src={ eth } alt="sol"/>
-                </Crypto2>
-                <Crypto3>
-                    <img src={ shiba } alt="eth"/>
-                </Crypto3>
-                <Crypto4>
-                    <img src={ sol } alt="shiba"/>
-                </Crypto4>
-                <Crypto5>
-                    <img src={ tether } alt="tether"/>
-                </Crypto5>
-            </CryptoWrapper>
-            <ButtonElements className='solid-mint widget-lrg-btn'>Show More</ButtonElements>
-        </Wrapper>
-      </>
-  );
+    return (
+        <>
+            <Wrapper>
+                <Buttons>
+                    <Btn className="orange"></Btn>
+                    <Btn className="green"></Btn>
+                </Buttons>
+                <Header>Top Earners</Header>
+                <CryptoWrapper>
+                    <Crypto1>
+                        <img src={bitcoin} alt="bitcoin"/>
+                    </Crypto1>
+                    <Crypto2>
+                        <img src={eth} alt="sol"/>
+                    </Crypto2>
+                    <Crypto3>
+                        <img src={shiba} alt="eth"/>
+                    </Crypto3>
+                    <Crypto4>
+                        <img src={sol} alt="shiba"/>
+                    </Crypto4>
+                    <Crypto5>
+                        <img src={tether} alt="tether"/>
+                    </Crypto5>
+                </CryptoWrapper>
+                <ButtonElements className='solid-mint widget-lrg-btn'>Show More</ButtonElements>
+            </Wrapper>
+        </>
+    );
 };
 
 export default TopEarnersPortrait;

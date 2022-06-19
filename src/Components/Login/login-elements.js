@@ -33,7 +33,7 @@ export const FormWrap = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-` ;
+`;
 
 export const Logo = styled.div`
     margin-top: 32px;

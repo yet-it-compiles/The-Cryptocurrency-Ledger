@@ -1,10 +1,10 @@
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom";
 import styled from "styled-components";
-import { btnReset, v } from "../Global/variables";
+import {btnReset, v} from "../Global/variables";
 
 export const Bar = styled.div`
-    width: ${({ isOpen }) => !isOpen ? `auto` : v.sidebarWidth};
-    background: ${({ theme }) => theme.sidebarColor};
+    width: ${({isOpen}) => !isOpen ? `auto` : v.sidebarWidth};
+    background: ${({theme}) => theme.sidebarColor};
     min-height: 100vh;
     padding: ${v.lgSpacing};
     
@@ -22,7 +22,7 @@ export const Logo = styled.div`
     img{
         max-width: 100%;
         height: auto;
-        filter: ${({ theme }) => theme.invert};
+        filter: ${({theme}) => theme.invert};
     }
 `;
 
@@ -30,27 +30,27 @@ export const SidebarBtn = styled.button`
     ${btnReset};
     position: absolute;
     top: ${v.xxlgSpacing};
-    left: ${({ isOpen }) => (isOpen ? `23.6rem` : `8.4rem`)};
+    left: ${({isOpen}) => (isOpen ? `23.6rem` : `8.4rem`)};
     width: 3.2rem;
     height: 3.2rem;
     border-radius: 50%;;
-    background: ${({ theme }) => theme.primaryColor};
-    box-shadow: 0 0 .4rem ${({ theme }) => theme.secondaryColor}, 0 0 .7rem ${({ theme }) => theme.bgColor};
+    background: ${({theme}) => theme.primaryColor};
+    box-shadow: 0 0 .4rem ${({theme}) => theme.secondaryColor}, 0 0 .7rem ${({theme}) => theme.bgColor};
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transform: ${({ isOpen }) => !isOpen ? `rotate(180deg)` : `initial`};
+    transform: ${({isOpen}) => !isOpen ? `rotate(180deg)` : `initial`};
     
     // Desktop screen
     @media screen and (min-width: 1920px) {
-        left: ${({ isOpen }) => (isOpen ? `24.8rem` : `9rem`)};
+        left: ${({isOpen}) => (isOpen ? `24.8rem` : `9rem`)};
     }
 `
 
 export const Search = styled.div`
     margin-top: ${v.lgSpacing};
-    background: ${({ theme }) => theme.secondaryColor};
+    background: ${({theme}) => theme.secondaryColor};
     border-radius: ${v.borderRadius};
     box-shadow: inset 0 .4rem .4rem rgba(0, 0, 0, 0.03);
     display: flex;
@@ -68,8 +68,8 @@ export const Search = styled.div`
         cursor: pointer;
 
         ::selection{
-            background-color: ${({ theme }) => theme.primaryColor};
-            color: ${({ theme }) => theme.textHoverColor};
+            background-color: ${({theme}) => theme.primaryColor};
+            color: ${({theme}) => theme.textHoverColor};
         }
     }
 `
@@ -79,7 +79,7 @@ export const SearchIcon = styled.button`
     padding: calc(${v.mdSpacing} - .2rem) ${v.mdSpacing};
     display: flex;
     cursor: pointer;
-    filter: ${({ theme }) => theme.invert};
+    filter: ${({theme}) => theme.invert};
 
     img{
         height: 2rem;
@@ -89,7 +89,7 @@ export const SearchIcon = styled.button`
 export const Divider = styled.div`
     height: .1rem;
     width: 100%;
-    background: ${({ theme }) => theme.bgColor};
+    background: ${({theme}) => theme.bgColor};
     margin: ${v.lgSpacing} 0;
 
 `
@@ -102,8 +102,8 @@ export const PageContainer = styled.div`
 
     :hover {
         transition: all ease .3s;
-        background-color: ${({ theme }) => theme.primaryColor};
-        color: ${({ theme }) => theme.textHoverColor};
+        background-color: ${({theme}) => theme.primaryColor};
+        color: ${({theme}) => theme.textHoverColor};
         box-shadow: inset 0 .4rem .4rem rgba(0, 0, 0, 0.1);
     }
     @media screen and (min-width: 1920px) {
@@ -123,7 +123,7 @@ export const PageLink = styled(Link)`
 export const PageIcon = styled.div`
     padding: ${v.smSpacing} ${v.mdSpacing};
     display: flex;
-    filter: ${({ theme }) => theme.invert};
+    filter: ${({theme}) => theme.invert};
 
     img {
         width: 2.5rem;
@@ -146,8 +146,8 @@ export const ThemeLabel = styled.span`
     display: block;
     flex: 1;
   ::selection{
-    background-color: ${({ theme }) => theme.primaryColor};
-    color: ${({ theme }) => theme.textHoverColor};
+    background-color: ${({theme}) => theme.primaryColor};
+    color: ${({theme}) => theme.textHoverColor};
   }
 `;
 
@@ -158,7 +158,7 @@ export const ThemeToggle = styled.button`
     width: 3.6rem;
     height: 2rem;
     border-radius: 1rem;
-    background: ${({ theme, isActive }) => (!isActive ? theme.bgColor : theme.primaryColor)};
+    background: ${({theme, isActive}) => (!isActive ? theme.bgColor : theme.primaryColor)};
     box-shadow: inset 0 .4rem .4rem rgba(0, 0, 0, 0.1);
     position: relative;
 `;
@@ -172,7 +172,7 @@ export const ToggleBtn = styled.div`
     transition: 0.2s ease right;
     right: calc(100% - 1.8rem - .1rem);
     border-radius: 50%;
-    background: ${({ theme }) => theme.textHoverColor};
+    background: ${({theme}) => theme.textHoverColor};
 `;
 
 

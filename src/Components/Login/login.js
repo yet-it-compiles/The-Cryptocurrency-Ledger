@@ -18,31 +18,33 @@ function Login() {
         <>
             <MainBackground>
                 <BackgroundImg>
-                <Logo to="/dashboard">LOGO</Logo> 
+                    <Logo to="/dashboard">LOGO</Logo>
 
                     <FormContainer>
                         <FormElements action="#">
                             <FormH1 to="/">Login</FormH1>
                             <FormLabel htmlFor="for">Email</FormLabel>
                             <FormInput className="login-input-mb" type="email" required/>
-                            
+
                             <FormLabel htmlFor="for">Password</FormLabel>
 
                             <PasswordContainer>
-                            <FormInput type={PasswordInputType} required />
-                            <TogglePassIcon>{ToggleIcon} </TogglePassIcon>
+                                <FormInput type={PasswordInputType} required/>
+                                <TogglePassIcon>{ToggleIcon} </TogglePassIcon>
                             </PasswordContainer>
 
                             <Text className="forgot-pass-link" to="/forgotpass">Forgot Password?</Text>
                             <ButtonElements className="mint-gradient med-btn" type="submit">Sign In</ButtonElements>
-                            <Text to="/signup" className='link-prompt'>Don't have an account? <Text to="/signup" className='link'>Sign Up</Text></Text>
+                            <Text to="/signup" className='link-prompt'>Don't have an account? <Text to="/signup"
+                                                                                                    className='link'>Sign
+                                Up</Text></Text>
                         </FormElements>
                     </FormContainer>
 
                 </BackgroundImg>
             </MainBackground>
         </>
-  )
+    )
 }
 
 export default Login

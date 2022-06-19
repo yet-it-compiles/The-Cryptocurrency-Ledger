@@ -38,8 +38,8 @@ let ENROLL = {
     onSubmit(e) {
         e.preventDefault();
 
-        if(ENROLL.state.password===ENROLL.state.passwordConfirm){
-            const obj ={
+        if (ENROLL.state.password === ENROLL.state.passwordConfirm) {
+            const obj = {
                 name: ENROLL.state.name,
                 email: ENROLL.state.email,
                 password: ENROLL.state.password,
@@ -47,8 +47,8 @@ let ENROLL = {
             };
 
             // put data into php file
-            axios.post('http://localhost/reactProject/insert.php',obj)
-                .then(res=> console.log(res.data))
+            axios.post('http://localhost/reactProject/insert.php', obj)
+                .then(res => console.log(res.data))
                 .catch(error => {
                     console.log(error.response)
                 });
@@ -66,8 +66,7 @@ let ENROLL = {
             document.getElementById('password_confirm').value = '';
             sendsEmailToUser(obj.email);
             console.log(obj.email);
-        }
-        else{
+        } else {
             alert("Password mismatch")
         }
     }
@@ -82,34 +81,41 @@ function Registration() {
                 <BackgroundImg>
                     <Logo to="/">LOGO</Logo>
 
-                     <FormContainer>
-                         <FormElements action="#">
-                             <FormH1 to="/">Create your ledger account</FormH1>
+                    <FormContainer>
+                        <FormElements action="#">
+                            <FormH1 to="/">Create your ledger account</FormH1>
 
-                             <FormLabel htmlFor="for">Username</FormLabel>
-                             <FormInput className="signup-input-mb" id="username" type="text" onChange={ENROLL.onChangeName} required/>
+                            <FormLabel htmlFor="for">Username</FormLabel>
+                            <FormInput className="signup-input-mb" id="username" type="text"
+                                       onChange={ENROLL.onChangeName} required/>
 
-                             <FormLabel htmlFor="for">Email</FormLabel>
-                             <FormInput className="signup-input-mb" id="email" type="text" onChange={ENROLL.onChangeEmail} required/>
+                            <FormLabel htmlFor="for">Email</FormLabel>
+                            <FormInput className="signup-input-mb" id="email" type="text"
+                                       onChange={ENROLL.onChangeEmail} required/>
 
-                             <FormLabel htmlFor="for">Password</FormLabel>
+                            <FormLabel htmlFor="for">Password</FormLabel>
 
-                             <PasswordContainer>
-                             <FormInput className="signup-input-mb" id="password" type={PasswordInputType} onChange={ENROLL.onChangePassword}  required/>
-                                 <TogglePassIcon>{ToggleIcon} </TogglePassIcon>
-                             </PasswordContainer>
+                            <PasswordContainer>
+                                <FormInput className="signup-input-mb" id="password" type={PasswordInputType}
+                                           onChange={ENROLL.onChangePassword} required/>
+                                <TogglePassIcon>{ToggleIcon} </TogglePassIcon>
+                            </PasswordContainer>
 
-                             <FormLabel htmlFor="for">Confirm Password</FormLabel>
-
-
-                             <FormInput className="signup-input-mb" id="password_confirm" type={PasswordInputType} onChange={ENROLL.onChangePasswordConfirm} required/>
+                            <FormLabel htmlFor="for">Confirm Password</FormLabel>
 
 
-                             <ButtonElements className="mint-gradient lrg-btn" type="submit" onClick={ENROLL.onSubmit}>Sign up</ButtonElements>
+                            <FormInput className="signup-input-mb" id="password_confirm" type={PasswordInputType}
+                                       onChange={ENROLL.onChangePasswordConfirm} required/>
 
-                             <Text to="/login" className='link-prompt'>Already have an account? <Text to="/login" className='link'>Sign In</Text></Text>
-                         </FormElements>
-                     </FormContainer>
+
+                            <ButtonElements className="mint-gradient lrg-btn" type="submit" onClick={ENROLL.onSubmit}>Sign
+                                up</ButtonElements>
+
+                            <Text to="/login" className='link-prompt'>Already have an account? <Text to="/login"
+                                                                                                     className='link'>Sign
+                                In</Text></Text>
+                        </FormElements>
+                    </FormContainer>
 
                 </BackgroundImg>
             </MainBackground>

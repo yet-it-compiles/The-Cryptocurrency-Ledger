@@ -14,14 +14,14 @@ export const lightTheme = {
 
 export const darkTheme = {
     bgColor: "#18191a",
-    sidebarColor: "#242526" ,
+    sidebarColor: "#242526",
     secondaryColor: "#3a3b3c",
-    primaryColor: "#3a3b3c" ,
-    toggleColor: "#fff" ,
-    textColor: "#ccc" ,
+    primaryColor: "#3a3b3c",
+    toggleColor: "#fff",
+    textColor: "#ccc",
     textHoverColor: "#fff",
-    iconChangeDark: "1" ,
-    brightnessDark: "25%" ,
-    hueValueDark: "320deg" ,
+    iconChangeDark: "1",
+    brightnessDark: "25%",
+    hueValueDark: "320deg",
     invert: "invert(1)"
 };

@@ -1,4 +1,4 @@
-import { inTransaction, outTransaction } from '../../../Assets/Images/Widgets/widget-assets.js';
+import {inTransaction, outTransaction} from '../../../Assets/Images/Widgets/widget-assets.js';
 import styled from 'styled-components'
 
 const TransactionsPortrait = () => {
@@ -21,7 +21,7 @@ const TransactionsPortrait = () => {
             transition: 500ms ease-in-out;
         }
     `
-         const CryptoWrapper = styled.div`
+    const CryptoWrapper = styled.div`
          text-align: center;
          display: grid;
          justify-content: center;
@@ -36,7 +36,7 @@ const TransactionsPortrait = () => {
         right: 15px;
         top: 15px;
     `
-     const Btn = styled.button`
+    const Btn = styled.button`
         margin-left: 10px;
         cursor: pointer;
         width: 15px;
@@ -55,7 +55,7 @@ const TransactionsPortrait = () => {
             background: #C569FC;
         }
     `
-     const Header = styled.h1`
+    const Header = styled.h1`
         cursor: pointer;
         font-weight: 400;
         margin-top: 15px;
@@ -71,21 +71,21 @@ const TransactionsPortrait = () => {
         }
     `
 
-     const T1 = styled.div`
+    const T1 = styled.div`
         img {
             height: 50px;
         }
          grid-column: 1;
          grid-row: 1;
     `
-     const T2 = styled.div`
+    const T2 = styled.div`
         img {
             height: 50px;
         }     
          grid-column: 1;
          grid-row: 2;
      `
-     const T3 = styled.div`
+    const T3 = styled.div`
         img {
             height: 50px;
         }     
@@ -93,14 +93,14 @@ const TransactionsPortrait = () => {
          grid-row: 3;
 
      `
-     const T4 = styled.div`
+    const T4 = styled.div`
         img {
             height: 50px;
         }     
          grid-column: 1;
          grid-row: 4;
      `
-     const T5 = styled.div`
+    const T5 = styled.div`
         img {
             height: 50px;
         }     
@@ -108,36 +108,36 @@ const TransactionsPortrait = () => {
          grid-row: 5;
 
      `
-  return (
-      <>
-        <Wrapper>
-            <Buttons>
-                <Btn className="orange"></Btn>
-                <Btn className="green"></Btn>
-                <Btn className="purple"></Btn>
-            </Buttons>
-            <Header>Transactions</Header>
-            <CryptoWrapper>
-                <T1>
-                    <img src={ inTransaction } alt="transaction"/>
-                </T1>
-                <T2>
-                    <img src={ inTransaction } alt="transaction"/>
-                </T2>
-                <T3>
-                    <img src={ outTransaction } alt="transaction"/>
-                </T3>
-                <T4>
-                    <img src={ outTransaction } alt="transaction"/>
-                </T4>
-                <T5>
-                    <img src={ inTransaction } alt="transaction"/>
-                </T5>
+    return (
+        <>
+            <Wrapper>
+                <Buttons>
+                    <Btn className="orange"></Btn>
+                    <Btn className="green"></Btn>
+                    <Btn className="purple"></Btn>
+                </Buttons>
+                <Header>Transactions</Header>
+                <CryptoWrapper>
+                    <T1>
+                        <img src={inTransaction} alt="transaction"/>
+                    </T1>
+                    <T2>
+                        <img src={inTransaction} alt="transaction"/>
+                    </T2>
+                    <T3>
+                        <img src={outTransaction} alt="transaction"/>
+                    </T3>
+                    <T4>
+                        <img src={outTransaction} alt="transaction"/>
+                    </T4>
+                    <T5>
+                        <img src={inTransaction} alt="transaction"/>
+                    </T5>
 
-            </CryptoWrapper>
-        </Wrapper>
-      </>
-  );
+                </CryptoWrapper>
+            </Wrapper>
+        </>
+    );
 };
 
 export default TransactionsPortrait;
