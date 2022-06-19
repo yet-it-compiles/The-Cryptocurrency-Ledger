@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import ethImg from "../../Assets/Images/Vector.png";
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom";
 
 export const MainBackground = styled.div`
     position: absolute;

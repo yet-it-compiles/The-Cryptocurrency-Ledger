@@ -124,7 +124,7 @@ export const PasswordContainer = styled.div`
   display: block ruby;
 `;
 
-export const TogglePassIcon = styled.button `
+export const TogglePassIcon = styled.button`
   background-color: transparent;
   color: #fff;
   border: none;
