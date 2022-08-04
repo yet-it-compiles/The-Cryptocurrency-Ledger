@@ -2,6 +2,7 @@ import TopEarnersLandscape from "./TopEarners/top-earners-landscape";
 import TopEarnersPortrait from "./TopEarners/top-earners-portrait";
 import TransactionsLandscape from "./Transactions/transactions-landscape";
 import TransactionsPortrait from "./Transactions/transactions-portrait";
+import AlarmListWidget from "./Alarm/alarm-list.widget.jsx";
 
 export const TopEarners1 = TopEarnersLandscape;
 export const TopEarners2 = TopEarnersPortrait;
