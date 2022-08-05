@@ -11,7 +11,7 @@ const layout = [
     {i: "b", x: 5, y: 0, w: 2.45, h: 5},
     {i: "c", x: 5, y: 0, w: 5.95, h: 2.8},
     {i: "d", x: 0, y: 0, w: 3.5, h: 4},
-    {i: "e", x: 0, y: 0, w: 5, h: 4}
+    {i: "e", x: 0, y: 0, w: 3, h: 4}
 ];
 const WidgetLayout = () => {
 
@@ -30,7 +30,7 @@ const WidgetLayout = () => {
             <div key="b"><TopEarners2/></div>
             <div key="c"><Transactions1/></div>
             <div key="d"><Transactions2/></div>
-            <div key = "e>"><AlarmListWidget ></AlarmListWidget></div>
+            <div key = "e"><AlarmListWidget ></AlarmListWidget></div>
         </GridLayout>
     );
 }

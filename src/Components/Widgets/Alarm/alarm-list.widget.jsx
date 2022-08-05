@@ -1,5 +1,7 @@
 import {Component} from 'react';
 import './alarm-list.styles.css'
+import './alarm card/alarm-card.component.jsx'
+import AlarmCard from "./alarm card/alarm-card.component";
 
 class AlarmListWidget extends Component {
 
@@ -8,7 +10,9 @@ class AlarmListWidget extends Component {
         return (
             <div className = "alarm-list-parent">
                 <h1 className = "alarm-list-title"> Alarm List</h1>
-                <h2> Does this work?</h2>
+
+                <AlarmCard></AlarmCard>
+
             </div>
         )
     }

@@ -1,0 +1,26 @@
+.card-wrapper {
+    color: white;
+    margin: 5px;
+    height: 30px;
+    width: 95%;
+    position: absolute;
+    transform: translate(0, -50%);
+    border-radius: 15px;
+    background: #3E4157;
+}
+.alarm-details  {
+    display: inline;
+}
+.alarm-card-coin {
+    float: left;
+    padding-right: 25%;
+    padding-left: 5px;
+}
+.alarm-card-price{
+    padding-top: 5px;
+    margin-top: 75px;
+}
+.alarm-card-type{
+    float: right;
+    padding-right: 5px;
+}
