@@ -10,8 +10,12 @@ class AlarmListWidget extends Component {
         return (
             <div className = "alarm-list-parent">
                 <h1 className = "alarm-list-title"> Alarm List</h1>
-
-                <AlarmCard></AlarmCard>
+                <div className={'card-wrapper'}>
+                    <AlarmCard title = "Bitcoin"></AlarmCard>
+                </div>
+                <div className={'card-wrapper'}>
+                        <AlarmCard title = "Doge"></AlarmCard>
+                </div>
 
             </div>
         )

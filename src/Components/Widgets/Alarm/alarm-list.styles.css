@@ -4,8 +4,7 @@
     padding: 20px;
 }
 .alarm-list-parent{
-    justify-content: left;
-    position: absolute;
+    position: relative;
     max-width: 400px;
     height: 410px;
     top: 50%;
@@ -27,4 +26,8 @@
 .alarm-list-parent:active {
     cursor: move;
     user-select: none;
+}
+.card-wrapper {
+    position: relative;
+    display : block;
 }
