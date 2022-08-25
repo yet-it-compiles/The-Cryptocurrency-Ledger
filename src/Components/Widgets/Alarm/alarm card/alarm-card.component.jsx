@@ -4,12 +4,14 @@ import './alarm-card.styles.css'
 class AlarmCard extends Component{
 
     render(){
-        /*const alarms = this.props*/
+        const{cardTitle, cardPrice, type} = this.props.alarms;
         return(
             <div className={"card-wrapper"}>
-                <h2 className={'alarm-details alarm-card-coin'}>{this.props.title}</h2>
-                <h2 className={'alarm-details alarm-card-price'}>$29999</h2>
-                <h2 className={'alarm-details alarm-card-type'}>buy</h2>
+                {console.log(cardPrice)}
+                {console.log(cardTitle)}
+                    <h2 className={'alarm-details alarm-card-coin'}>{cardTitle}</h2>
+                    <h2 className={'alarm-details alarm-card-price'} >{cardPrice}</h2>
+                <h2 className={'alarm-details alarm-card-type'}>{type}</h2>
             </div>
         )
     }

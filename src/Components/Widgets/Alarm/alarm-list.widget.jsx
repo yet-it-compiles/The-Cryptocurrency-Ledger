@@ -4,17 +4,38 @@ import './alarm card/alarm-card.component.jsx'
 import AlarmCard from "./alarm card/alarm-card.component";
 
 class AlarmListWidget extends Component {
+    constructor() {
+        super();
+
+        this.state = {
+            alarms:[
+                {
+                coinName: "bitcoin",
+                coinPrice:  12345,
+                type: "buy"
+                }  ,
+                {
+                coinName: "doge",
+                coinPrice:  12345,
+                type: "sell"
+                }
+
+            ]
+        };
+    }
 
     render() {
 
         return (
             <div className = "alarm-list-parent">
                 <h1 className = "alarm-list-title"> Alarm List</h1>
-                <div className={'card-wrapper'}>
-                    <AlarmCard title = "Bitcoin"></AlarmCard>
-                </div>
-                <div className={'card-wrapper'}>
-                        <AlarmCard title = "Doge"></AlarmCard>
+                <div className={'card-container'}>
+                    {
+                        this.state.alarms.map((alarm) => {
+
+                            return (<AlarmCard alarms={alarm}/>)
+                        })
+                    }
                 </div>
 
             </div>

@@ -27,7 +27,6 @@
     cursor: move;
     user-select: none;
 }
-.card-wrapper {
-    position: relative;
-    display : block;
+.card-container {
+    display: grid;
 }
