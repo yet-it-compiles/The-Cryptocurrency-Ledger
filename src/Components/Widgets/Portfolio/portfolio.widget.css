@@ -1,7 +1,6 @@
 .portfolio-widget{
     position: relative;
     max-width: 400px;
-    height: 200px;
     top: 50%;
     left: 50%;
     width: 100%;
@@ -12,12 +11,20 @@
     transition: 500ms ease-in-out;
 
 }
+.portfolio-widget-wrapper{
+    padding: 10px;
+}
 .portfolio-widget:hover {
     color: rgba(255, 255, 255, 1);
     box-shadow: 0 5px 20px rgba(46, 48, 71, 0.7);
     transition: 500ms ease-in-out;
 }
-
+.portfolio-widget-total{
+    margin: 5px;
+}
+.portfolio-widget-today{
+    margin: 5px;
+}
 .portfolio-widget-title {
     text-align: center;
     color: white;

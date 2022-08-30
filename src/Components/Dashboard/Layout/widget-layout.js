@@ -13,7 +13,7 @@ const layout = [
     {i: "c", x: 5, y: 0, w: 5.95, h: 2.8},
     {i: "d", x: 0, y: 0, w: 3.5, h: 4},
     {i: "e", x: 0, y: 0, w: 3, h: 4},
-    {i: "f", x: 10, y: 0, w: 3, h: 4}
+    {i: "f", x: 10, y: 0, w: 2.2, h: 1.5}
 ];
 const WidgetLayout = () => {
 
