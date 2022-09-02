@@ -3,6 +3,10 @@ import {Component} from 'react';
 class TopEarnersWidgetPort extends Component{
     constructor() {
         super();
+
+        this.state = {
+
+        }
     }
 
     render() {
