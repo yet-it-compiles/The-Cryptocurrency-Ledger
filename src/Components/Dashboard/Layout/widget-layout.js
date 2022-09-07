@@ -6,7 +6,7 @@ import "react-resizable/css/styles.css";
 import {TopEarners1, TopEarners2, Transactions1, Transactions2} from "../../Widgets";
 import AlarmListWidget from "../../Widgets/Alarm/alarm-list.widget.jsx";
 import PortfolioWidget from "../../Widgets/Portfolio/portfolio.widget.jsx";
-
+import TopEarnersWidgetPort from "../../Widgets/TopEarners/top-earners-port.widget.jsx";
 const layout = [
     {i: "a", x: 0, y: 0, w: 5, h: 2.8},
     {i: "b", x: 5, y: 0, w: 2.45, h: 5},
@@ -28,7 +28,7 @@ const WidgetLayout = () => {
             preventCollision={false}
             autoSize={true}
         >
-            <div key="a"><TopEarners1/></div>
+            <div key="a"><TopEarnersWidgetPort/></div>
             <div key="b"><TopEarners2/></div>
             <div key="c"><Transactions1/></div>
             <div key="d"><Transactions2/></div>

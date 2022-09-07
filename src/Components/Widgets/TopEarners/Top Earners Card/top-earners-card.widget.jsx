@@ -3,7 +3,7 @@ import {Component} from "react";
 class TopEarnersCardWidget extends Component {
 
     render() {
-        const {name, price, percent} = this.state;
+        const {name, price, percent} = this.props;
 
         return(
             <div className={"top-earners-card-widget"}>
@@ -18,7 +18,7 @@ class TopEarnersCardWidget extends Component {
 
                 <div className={"top-earners-card-widget-bottom-line"}>
                     <h2 className={"top-earners-card-widget-percent"}>
-                        {percent}
+                        {percent}%
                     </h2>
                 </div>
 
@@ -27,3 +27,4 @@ class TopEarnersCardWidget extends Component {
         )
     }
 }
+export default TopEarnersCardWidget;
