@@ -1,19 +1,9 @@
 .top-earners-card-widget{
-    position: relative;
-    max-width: 400px;
-    height: 410px;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    background: rgba(46, 48, 71, 0.7);
+    background: #3E4157;
+    margin: 5px;
     border-radius: 15px;
-    transform: translate(-50%, -50%);
-    box-shadow: 10px 10px 15px rgba(0,0,0,0.06);
-    transition: 500ms ease-in-out;
 
 }
-.top-earners-card-widget:hover {
-    color: rgba(255, 255, 255, 1);
-    box-shadow: 0 5px 20px rgba(46, 48, 71, 0.7);
-    transition: 500ms ease-in-out;
+.top-earners-card-widget-top-line{
+    display: inline;
 }

@@ -28,8 +28,8 @@ const WidgetLayout = () => {
             preventCollision={false}
             autoSize={true}
         >
-            <div key="a"><TopEarnersWidgetPort/></div>
-            <div key="b"><TopEarners2/></div>
+            <div key="a"><TopEarners1/></div>
+            <div key="b"><TopEarnersWidgetPort/></div>
             <div key="c"><Transactions1/></div>
             <div key="d"><Transactions2/></div>
             <div key = "e"><AlarmListWidget ></AlarmListWidget></div>

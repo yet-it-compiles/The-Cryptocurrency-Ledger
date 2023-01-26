@@ -1,4 +1,5 @@
 import {Component} from 'react';
+import "./top-earners-port.widget.css"
 import TopEarnersCardWidget from "./Top Earners Card/top-earners-card.widget.jsx";
 class TopEarnersWidgetPort extends Component{
     constructor() {
@@ -31,6 +32,7 @@ class TopEarnersWidgetPort extends Component{
                     </div>
                     <div className={"top-earners-port-widget-card-wrapper"}>
                         {this.state.cards.map((card) => {
+                            console.log(card);
                             return <TopEarnersCardWidget cards = {card}></TopEarnersCardWidget>
                         })}
 

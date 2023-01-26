@@ -1,10 +1,13 @@
 import {Component} from "react";
-
+import "./top-earners-card.css";
 class TopEarnersCardWidget extends Component {
 
     render() {
-        const {name, price, percent} = this.props;
-
+        console.log(this.props);
+        const name = this.props.cards.coinname;
+        const price = this.props.cards.price;
+        const percent =  this.props.cards.percent;
+        console.log(name);
         return(
             <div className={"top-earners-card-widget"}>
                 <div className={"top-earners-card-widget-top-line"}>
